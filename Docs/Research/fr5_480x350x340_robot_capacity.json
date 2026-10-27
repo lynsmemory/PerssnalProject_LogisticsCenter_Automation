@@ -1,0 +1,306 @@
+{
+  "box_mm": [
+    480,
+    350,
+    340
+  ],
+  "pallet_mm": [
+    1100,
+    1100,
+    150
+  ],
+  "design_parameters": {
+    "axis_to_near_edge_mm": 150,
+    "tool_mm": 125,
+    "approach_mm": 100,
+    "link_sum_screening_reserve_mm": 20,
+    "base_search_mm": [
+      600,
+      1300
+    ],
+    "base_step_mm": 1,
+    "box_gap_mm": 10
+  },
+  "results": {
+    "six_2x3": {
+      "centers_m": [
+        [
+          -0.39,
+          -0.36,
+          0
+        ],
+        [
+          -0.39,
+          0,
+          0
+        ],
+        [
+          -0.39,
+          0.36,
+          0
+        ],
+        [
+          -0.88,
+          -0.36,
+          0
+        ],
+        [
+          -0.88,
+          0,
+          0
+        ],
+        [
+          -0.88,
+          0.36,
+          0
+        ]
+      ],
+      "radii_m": [
+        0.530754180388624,
+        0.39,
+        0.530754180388624,
+        0.950789145920377,
+        0.88,
+        0.950789145920377
+      ],
+      "all_positions_reachable": false,
+      "reason": "outside downward radial envelope even before selecting base height"
+    },
+    "five_split_3near_2far": {
+      "centers_m": [
+        [
+          -0.39,
+          -0.36,
+          0
+        ],
+        [
+          -0.39,
+          0,
+          0
+        ],
+        [
+          -0.39,
+          0.36,
+          0
+        ],
+        [
+          -0.815,
+          -0.245,
+          1.5707963267948966
+        ],
+        [
+          -0.815,
+          0.245,
+          1.5707963267948966
+        ]
+      ],
+      "radii_m": [
+        0.530754180388624,
+        0.39,
+        0.530754180388624,
+        0.8510287891722582,
+        0.8510287891722582
+      ],
+      "all_positions_reachable": true,
+      "best_mixed": {
+        "base_mm": 783,
+        "per_column_layers": [
+          3,
+          3,
+          3,
+          2,
+          2
+        ],
+        "total_boxes": 13,
+        "full_layers": 2,
+        "max_layer": 3,
+        "screen_margin_mm": 76.88775257033997
+      },
+      "best_uniform": {
+        "base_mm": 783,
+        "layers": 2,
+        "boxes": 10
+      },
+      "mixed_verification": {
+        "samples": 143,
+        "failed": [],
+        "max_fk_error_m": 5.578801654593729e-16
+      },
+      "uniform_verification": {
+        "samples": 110,
+        "failed": [],
+        "max_fk_error_m": 5.578801654593729e-16
+      },
+      "at_base900": null,
+      "at_base950": null,
+      "at_base1000": null
+    },
+    "four_compact_columns": {
+      "centers_m": [
+        [
+          -0.325,
+          -0.245,
+          1.5707963267948966
+        ],
+        [
+          -0.325,
+          0.245,
+          1.5707963267948966
+        ],
+        [
+          -0.685,
+          -0.245,
+          1.5707963267948966
+        ],
+        [
+          -0.685,
+          0.245,
+          1.5707963267948966
+        ]
+      ],
+      "radii_m": [
+        0.4070012284993744,
+        0.4070012284993744,
+        0.7274957044546724,
+        0.7274957044546724
+      ],
+      "all_positions_reachable": true,
+      "best_mixed": {
+        "base_mm": 1004,
+        "per_column_layers": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "total_boxes": 14,
+        "full_layers": 3,
+        "max_layer": 4,
+        "screen_margin_mm": 65.82193514973645
+      },
+      "best_uniform": {
+        "base_mm": 953,
+        "layers": 3,
+        "boxes": 12
+      },
+      "mixed_verification": {
+        "samples": 154,
+        "failed": [],
+        "max_fk_error_m": 5.926969055564841e-16
+      },
+      "uniform_verification": {
+        "samples": 132,
+        "failed": [],
+        "max_fk_error_m": 8.275631022611515e-16
+      },
+      "at_base900": {
+        "base_mm": 900,
+        "per_column_layers": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "total_boxes": 12,
+        "full_layers": 3,
+        "max_layer": 3,
+        "screen_margin_mm": 64.66789306327448
+      },
+      "at_base950": {
+        "base_mm": 950,
+        "per_column_layers": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "total_boxes": 14,
+        "full_layers": 3,
+        "max_layer": 4,
+        "screen_margin_mm": 11.821935149736396
+      },
+      "at_base1000": {
+        "base_mm": 1000,
+        "per_column_layers": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "total_boxes": 14,
+        "full_layers": 3,
+        "max_layer": 4,
+        "screen_margin_mm": 61.82193514973644
+      }
+    },
+    "four_pinwheel": {
+      "centers_m": [
+        [
+          -0.75,
+          -0.245,
+          0
+        ],
+        [
+          -0.815,
+          0.18,
+          1.5707963267948966
+        ],
+        [
+          -0.39,
+          0.245,
+          0
+        ],
+        [
+          -0.325,
+          -0.18,
+          1.5707963267948966
+        ]
+      ],
+      "radii_m": [
+        0.789002534850174,
+        0.8346406412342978,
+        0.46057029865157395,
+        0.37151715976519845
+      ],
+      "all_positions_reachable": true,
+      "best_mixed": {
+        "base_mm": 783,
+        "per_column_layers": [
+          2,
+          2,
+          3,
+          3
+        ],
+        "total_boxes": 10,
+        "full_layers": 2,
+        "max_layer": 3,
+        "screen_margin_mm": 115.26012254457696
+      },
+      "best_uniform": {
+        "base_mm": 783,
+        "layers": 2,
+        "boxes": 8
+      },
+      "mixed_verification": {
+        "samples": 110,
+        "failed": [],
+        "max_fk_error_m": 4.972820174300706e-16
+      },
+      "uniform_verification": {
+        "samples": 88,
+        "failed": [],
+        "max_fk_error_m": 4.972820174300706e-16
+      },
+      "at_base900": null,
+      "at_base950": null,
+      "at_base1000": null
+    }
+  },
+  "limits": [
+    "candidate-pattern comparison, not global optimization over all layouts",
+    "20mm link reserve is a geometric screening margin, not certified safety clearance",
+    "no self/environment/carrying-box collision check",
+    "no continuous joint-path, pickup-site or transport stability validation",
+    "box size remains a comparison scenario until user selects it"
+  ]
+}

@@ -1,0 +1,11 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"33-19062019-082836";"";
+"REFERENCE";"10.01.36.00269";"";
+"TraceParts.PartTitle";"VEE-Turnkey-Grippers";"";
+"TraceParts.InstanceId";"33-19062019-0828365QEG0OJ48FGRTQIHTA96CLV6P";"";
+"SELECTION";"VEE 4xSPB1 174x174";"";
+"SUPPLIER";"SCHMALZ";"";
+"DESIGN";"Turnkey gripper";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartVersion";"1.0.1";"";

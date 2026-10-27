@@ -1,0 +1,105 @@
+{
+  "tool_flange_to_uncompressed_contact_m": 0.1828,
+  "interface_kit_y_mm": -95.8,
+  "head_contact_z_mm": -87.0,
+  "robot_mount_plane_kit_y_mm": 0.0,
+  "head_selected_solids": [
+    11,
+    14,
+    18,
+    19,
+    23,
+    29,
+    32,
+    34,
+    40,
+    44,
+    49,
+    54,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    71,
+    74,
+    76,
+    77,
+    79,
+    86,
+    87
+  ],
+  "kit_selected_solids": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    11,
+    13
+  ],
+  "omitted_original_one_cup_parts": [
+    1,
+    8,
+    9
+  ],
+  "unrouted_flexible_cable_excluded": [
+    10,
+    12
+  ],
+  "vertices": 123116,
+  "triangles": 167996,
+  "bbox_m": [
+    [
+      -0.0870253967444162,
+      -0.0870253967444161,
+      -0.006000000000000001
+    ],
+    [
+      0.0870253967444162,
+      0.0870253967444163,
+      0.18280000000000002
+    ]
+  ],
+  "cup_centers_tool_xy_mm": [
+    [
+      -62.2253967,
+      -62.2253967
+    ],
+    [
+      -62.2253967,
+      62.2253967
+    ],
+    [
+      62.2253967,
+      -62.2253967
+    ],
+    [
+      62.2253967,
+      62.2253967
+    ]
+  ],
+  "notes": [
+    "Robot mount plane is the large planar annulus Y=0 of kit solid11; +Y5 is locating protrusion, not mounting plane.",
+    "Tool length uses uncompressed CAD. Cup compression and actual routing not modeled."
+  ],
+  "sources": [
+    {
+      "file": "Docs/CAD/VEE 4xSPB1 174x174/10_01_36_00269.stp",
+      "sha256": "45b0ce47138318ea1ea805d9db8445a0cfeed58db0fcfc0ab9bf85f0eee47c14"
+    },
+    {
+      "file": "Docs/CAD/ROB-SET ECBPi FAIRINO/10_03_01_00988.stp",
+      "sha256": "eba51abdc3fafc0fd88b3e9b7941bb950ccab6016df77a81afe435d9b83823a9"
+    },
+    {
+      "file": "Docs/CAD/SPB1 40 ED-65 G1 4-AG/10_01_06_03498.stp",
+      "sha256": "9b12484f038508dca5897f58a0efe7428126a7c0e87dbc2de9a50c2db2ffa877"
+    }
+  ]
+}

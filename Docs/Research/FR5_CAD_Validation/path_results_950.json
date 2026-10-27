@@ -1,0 +1,485 @@
+{
+  "elapsed_s": 117.74728178977966,
+  "results": [
+    {
+      "box_mm": [
+        360,
+        280,
+        340
+      ],
+      "layers": 3,
+      "all_completed": true,
+      "attempts": [
+        {
+          "start_branch": 0,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 101,
+                "point": [
+                  -0.37806515792432555,
+                  0.12922729098967284,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 70,
+                "point": [
+                  -0.0705155153673547,
+                  -0.3932762092622881,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 1,
+          "failed_box": 2,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 55,
+                "point": [
+                  0.12829026289181383,
+                  0.378391626659983,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 116,
+                "point": [
+                  -0.39316639936858305,
+                  0.07108543296920013,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 2,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 55,
+                "point": [
+                  0.12460845840707245,
+                  0.3796125504593963,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 126,
+                "point": [
+                  -0.641578947368421,
+                  -0.29000000000000004,
+                  0.59
+                ],
+                "valid_ik": 8,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 3,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 101,
+                "point": [
+                  -0.37806515792432555,
+                  0.12922729098967284,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 70,
+                "point": [
+                  -0.0705155153673547,
+                  -0.3932762092622881,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 4,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 24,
+                "point": [
+                  0.3917628316767165,
+                  0.08075818049362378,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 126,
+                "point": [
+                  -0.641578947368421,
+                  -0.29000000000000004,
+                  0.59
+                ],
+                "valid_ik": 8,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 5,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 24,
+                "point": [
+                  0.3917628316767165,
+                  0.08075818049362378,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 55,
+                "point": [
+                  0.12829026289181383,
+                  -0.378391626659983,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 6,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 24,
+                "point": [
+                  0.3917628316767165,
+                  0.08075818049362378,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 55,
+                "point": [
+                  0.12829026289181383,
+                  -0.378391626659983,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            }
+          ]
+        }
+      ],
+      "start_branch": 7,
+      "records": [
+        {
+          "id": 1,
+          "layer": 1,
+          "target": [
+            -0.7000000000000001,
+            -0.29000000000000004,
+            0.49
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 0.95,
+          "cartesian_waypoints": 135,
+          "joint_samples_oneway": 826
+        },
+        {
+          "id": 2,
+          "layer": 1,
+          "target": [
+            -0.7000000000000001,
+            0.29000000000000004,
+            0.49
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 0.95,
+          "cartesian_waypoints": 177,
+          "joint_samples_oneway": 1036
+        },
+        {
+          "id": 3,
+          "layer": 1,
+          "target": [
+            -0.7000000000000001,
+            0,
+            0.49
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 0.95,
+          "cartesian_waypoints": 158,
+          "joint_samples_oneway": 1006
+        },
+        {
+          "id": 4,
+          "layer": 1,
+          "target": [
+            -0.32999999999999996,
+            -0.29000000000000004,
+            0.49
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 0.95,
+          "cartesian_waypoints": 117,
+          "joint_samples_oneway": 697
+        },
+        {
+          "id": 5,
+          "layer": 1,
+          "target": [
+            -0.32999999999999996,
+            0.29000000000000004,
+            0.49
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 0.95,
+          "cartesian_waypoints": 159,
+          "joint_samples_oneway": 907
+        },
+        {
+          "id": 6,
+          "layer": 1,
+          "target": [
+            -0.32999999999999996,
+            0,
+            0.49
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 0.95,
+          "cartesian_waypoints": 140,
+          "joint_samples_oneway": 865
+        },
+        {
+          "id": 7,
+          "layer": 2,
+          "target": [
+            -0.7000000000000001,
+            -0.29000000000000004,
+            0.8300000000000001
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 0.95,
+          "cartesian_waypoints": 118,
+          "joint_samples_oneway": 682
+        },
+        {
+          "id": 8,
+          "layer": 2,
+          "target": [
+            -0.7000000000000001,
+            0.29000000000000004,
+            0.8300000000000001
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.199,
+          "cartesian_waypoints": 186,
+          "joint_samples_oneway": 1086
+        },
+        {
+          "id": 9,
+          "layer": 2,
+          "target": [
+            -0.7000000000000001,
+            0,
+            0.8300000000000001
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.199,
+          "cartesian_waypoints": 167,
+          "joint_samples_oneway": 1014
+        },
+        {
+          "id": 10,
+          "layer": 2,
+          "target": [
+            -0.32999999999999996,
+            -0.29000000000000004,
+            0.8300000000000001
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.199,
+          "cartesian_waypoints": 126,
+          "joint_samples_oneway": 761
+        },
+        {
+          "id": 11,
+          "layer": 2,
+          "target": [
+            -0.32999999999999996,
+            0.29000000000000004,
+            0.8300000000000001
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.199,
+          "cartesian_waypoints": 168,
+          "joint_samples_oneway": 971
+        },
+        {
+          "id": 12,
+          "layer": 2,
+          "target": [
+            -0.32999999999999996,
+            0,
+            0.8300000000000001
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.199,
+          "cartesian_waypoints": 149,
+          "joint_samples_oneway": 911
+        },
+        {
+          "id": 13,
+          "layer": 3,
+          "target": [
+            -0.7000000000000001,
+            -0.29000000000000004,
+            1.17
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.27,
+          "cartesian_waypoints": 135,
+          "joint_samples_oneway": 829
+        },
+        {
+          "id": 14,
+          "layer": 3,
+          "target": [
+            -0.7000000000000001,
+            0.29000000000000004,
+            1.17
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.539,
+          "cartesian_waypoints": 204,
+          "joint_samples_oneway": 1343
+        },
+        {
+          "id": 15,
+          "layer": 3,
+          "target": [
+            -0.7000000000000001,
+            0,
+            1.17
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.539,
+          "cartesian_waypoints": 185,
+          "joint_samples_oneway": 1214
+        },
+        {
+          "id": 16,
+          "layer": 3,
+          "target": [
+            -0.32999999999999996,
+            -0.29000000000000004,
+            1.17
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.539,
+          "cartesian_waypoints": 144,
+          "joint_samples_oneway": 973
+        },
+        {
+          "id": 17,
+          "layer": 3,
+          "target": [
+            -0.32999999999999996,
+            0.29000000000000004,
+            1.17
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.539,
+          "cartesian_waypoints": 186,
+          "joint_samples_oneway": 1183
+        },
+        {
+          "id": 18,
+          "layer": 3,
+          "target": [
+            -0.32999999999999996,
+            0,
+            1.17
+          ],
+          "side": -1,
+          "transit_tcp_height_m": 1.539,
+          "cartesian_waypoints": 167,
+          "joint_samples_oneway": 1071
+        }
+      ],
+      "collision_calls": 83730
+    }
+  ]
+}

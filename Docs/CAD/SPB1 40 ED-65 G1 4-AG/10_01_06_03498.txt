@@ -1,0 +1,14 @@
+﻿"Symbol";"Value";"Unit";
+"REFERENCE";"10.01.06.03498";"";
+"TraceParts.PartVersion";"1.0.5";"";
+"SUPPLIER";"SCHMALZ";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartNumber";"33-16052019-070462";"";
+"TraceParts.PartLanguage";"en";"";
+"DESIGN";"Bellows suction pad (round)";"";
+"TraceParts.InstanceId";"33-16052019-070462B4O5CS82WZTQGCB5CKPZQ8VKO";"";
+"TraceParts.PartTitle";"Bellow Suction Pads SPB1 (1.5 Folds)";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartStatusId";"";"";
+"SELECTION";"SPB1 40 ED-65 G1/4-AG";"";
+"TraceParts.ClassPath";"SCHMALZ:33-16052019-070462";"";

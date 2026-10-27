@@ -1,0 +1,11 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"32-12072019-091213";"";
+"REFERENCE";"10.03.01.00988";"";
+"TraceParts.PartTitle";"Robots set ECBPi";"";
+"TraceParts.InstanceId";"32-12072019-091213CXUJFJ58RNNVP21ZN54I91GFM";"";
+"SELECTION";"ROB-SET ECBPi FAIRINO";"";
+"SUPPLIER";"SCHMALZ";"";
+"DESIGN";"Robots-Set ECBPi";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartVersion";"1.2.0";"";

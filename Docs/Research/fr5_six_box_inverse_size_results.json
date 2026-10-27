@@ -1,0 +1,159 @@
+{
+  "base_mm": 900,
+  "axis_to_near_edge_mm": 150,
+  "tool_mm": 125,
+  "approach_mm": 100,
+  "box_gap_mm": 10,
+  "box_height_mm": 340,
+  "arm_link_sum_reserve_mm": 20,
+  "first_layer_radius_limit_mm": 833.8411190582142,
+  "max_long_edge_at_width350_mm": 394.7495551301577,
+  "candidates": [
+    {
+      "box_mm": [
+        480,
+        350,
+        340
+      ],
+      "footprint_mm": [
+        970,
+        1070
+      ],
+      "farthest_tcp_radius_mm": 950.789145920377,
+      "farthest_contact_envelope_mm": null,
+      "full_layers_at_base900": 0,
+      "boxes": 0,
+      "contact_and_approach_per_layer_pass": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "box_mm": [
+        400,
+        300,
+        340
+      ],
+      "footprint_mm": [
+        810,
+        920
+      ],
+      "farthest_tcp_radius_mm": 820.7923001588163,
+      "farthest_contact_envelope_mm": [
+        463.02535013398386,
+        1190.9746498660163
+      ],
+      "full_layers_at_base900": 2,
+      "boxes": 12,
+      "contact_and_approach_per_layer_pass": [
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "box_mm": [
+        390,
+        350,
+        340
+      ],
+      "footprint_mm": [
+        790,
+        1070
+      ],
+      "farthest_tcp_radius_mm": 827.4206910635,
+      "farthest_contact_envelope_mm": [
+        476.4073072838323,
+        1177.5926927161677
+      ],
+      "full_layers_at_base900": 2,
+      "boxes": 12,
+      "contact_and_approach_per_layer_pass": [
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "box_mm": [
+        380,
+        350,
+        340
+      ],
+      "footprint_mm": [
+        770,
+        1070
+      ],
+      "farthest_tcp_radius_mm": 813.9410298049854,
+      "farthest_contact_envelope_mm": [
+        449.8145641342261,
+        1204.185435865774
+      ],
+      "full_layers_at_base900": 2,
+      "boxes": 12,
+      "contact_and_approach_per_layer_pass": [
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "box_mm": [
+        380,
+        340,
+        340
+      ],
+      "footprint_mm": [
+        770,
+        1040
+      ],
+      "farthest_tcp_radius_mm": 809.5677859203639,
+      "farthest_contact_envelope_mm": [
+        441.682508046741,
+        1212.3174919532592
+      ],
+      "full_layers_at_base900": 2,
+      "boxes": 12,
+      "contact_and_approach_per_layer_pass": [
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "box_mm": [
+        360,
+        280,
+        340
+      ],
+      "footprint_mm": [
+        730,
+        860
+      ],
+      "farthest_tcp_radius_mm": 757.6938695805848,
+      "farthest_contact_envelope_mm": [
+        358.9228622414477,
+        1295.0771377585525
+      ],
+      "full_layers_at_base900": 3,
+      "boxes": 18,
+      "contact_and_approach_per_layer_pass": [
+        true,
+        true,
+        true,
+        false
+      ]
+    }
+  ],
+  "limits": [
+    "only 2x3 pattern with long edge depth and centered lateral placement",
+    "point IK with local approach only; no full path or collisions",
+    "sizes are comparison options, not confirmed SRS changes"
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "original_900",
+    "base_m": 0.9,
+    "completed": false,
+    "far_outer_approach_upper_bound_margin_mm": 0.6943737393663163
+  },
+  {
+    "name": "original_950",
+    "base_m": 0.95,
+    "completed": true,
+    "joint_samples_roundtrip": 34750,
+    "joint_limit_margin_deg": 8.112475893390222,
+    "max_joint_sample_step_rad": 0.007998293038092519,
+    "collision_calls": 83730,
+    "max_contact_error_m": 8.044330061068549e-16,
+    "max_tool_axis_tilt_deg": 1.2074182697257333e-06,
+    "far_outer_approach_upper_bound_margin_mm": 50.694373739365915
+  },
+  {
+    "name": "local_900",
+    "base_m": 0.9,
+    "completed": false,
+    "far_outer_approach_upper_bound_margin_mm": 0.6943737393663163
+  }
+]

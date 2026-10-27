@@ -1,0 +1,151 @@
+{
+  "box_mm": [
+    480,
+    380,
+    340
+  ],
+  "box_kg": 2,
+  "pallet_mm": [
+    1100,
+    1100,
+    150
+  ],
+  "assumptions": {
+    "tool_mm": 125,
+    "local_vertical_approach_mm": 100,
+    "axis_to_near_edge_mm": 150,
+    "box_gap_mm": 20,
+    "pedestal_plan_mm": [
+      200,
+      200
+    ],
+    "pedestal_to_pallet_clearance_mm": 50,
+    "box_rotation": "90 degree yaw only; upright; no overhang",
+    "rear_pallet_center_m": [
+      -0.7,
+      0
+    ]
+  },
+  "results": [
+    {
+      "base_m": 0.95,
+      "tiers_per_column": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "boxes": 12,
+      "max_loaded_height_m": 1.17,
+      "cargo_mass_kg": 24,
+      "ik_sample_points": 132,
+      "failed_points": [],
+      "max_fk_error_m": 5.900916318210353e-16,
+      "envelopes": [
+        {
+          "center_m": [
+            -0.34,
+            -0.25
+          ],
+          "contact_envelope_with_20mm_arm_reserve_m": [
+            0.1384400779590751,
+            1.6155599220409245
+          ]
+        },
+        {
+          "center_m": [
+            -0.34,
+            0.25
+          ],
+          "contact_envelope_with_20mm_arm_reserve_m": [
+            0.1384400779590751,
+            1.6155599220409245
+          ]
+        },
+        {
+          "center_m": [
+            -0.74,
+            -0.25
+          ],
+          "contact_envelope_with_20mm_arm_reserve_m": [
+            0.44351250759054295,
+            1.3104874924094565
+          ]
+        },
+        {
+          "center_m": [
+            -0.74,
+            0.25
+          ],
+          "contact_envelope_with_20mm_arm_reserve_m": [
+            0.44351250759054295,
+            1.3104874924094565
+          ]
+        }
+      ]
+    },
+    {
+      "base_m": 0.98,
+      "tiers_per_column": [
+        4,
+        4,
+        3,
+        3
+      ],
+      "boxes": 14,
+      "max_loaded_height_m": 1.51,
+      "cargo_mass_kg": 28,
+      "ik_sample_points": 154,
+      "failed_points": [],
+      "max_fk_error_m": 6.377745716588144e-16,
+      "envelopes": [
+        {
+          "center_m": [
+            -0.34,
+            -0.25
+          ],
+          "contact_envelope_with_20mm_arm_reserve_m": [
+            0.16844007795907512,
+            1.6455599220409245
+          ]
+        },
+        {
+          "center_m": [
+            -0.34,
+            0.25
+          ],
+          "contact_envelope_with_20mm_arm_reserve_m": [
+            0.16844007795907512,
+            1.6455599220409245
+          ]
+        },
+        {
+          "center_m": [
+            -0.74,
+            -0.25
+          ],
+          "contact_envelope_with_20mm_arm_reserve_m": [
+            0.473512507590543,
+            1.3404874924094567
+          ]
+        },
+        {
+          "center_m": [
+            -0.74,
+            0.25
+          ],
+          "contact_envelope_with_20mm_arm_reserve_m": [
+            0.473512507590543,
+            1.3404874924094567
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "geometric point reach only",
+    "no collision, load moment, joint-continuous path or full transport validation",
+    "20mm link-sum reserve is screening margin, not certified safety margin",
+    "125mm tool and 200mm pedestal are design proposals, not selected products"
+  ]
+}

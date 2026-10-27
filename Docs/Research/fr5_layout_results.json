@@ -1,0 +1,130 @@
+{
+  "parameters": {
+    "base_m": 1.1,
+    "tool_flange_to_contact_m": 0.125,
+    "wrist_origin_to_flange_m": 0.1,
+    "pallet_m": [
+      1.1,
+      1.1,
+      0.15
+    ],
+    "base_axis_to_near_edge_m": 0.2,
+    "approach_m": 0.1
+  },
+  "analytic_IK_FK_verified_solutions": 1371,
+  "absolute_contact_height_upper_bound_m": 1.84701,
+  "radial_outer_bound_m": 0.9276458645948894,
+  "radius_table": [
+    {
+      "radius_m": 0.3,
+      "contact_min_m": 0.22701033301212947,
+      "contact_max_m": 1.8269896669878705,
+      "stack_max_with_100mm_approach_m": 1.7269896669878704
+    },
+    {
+      "radius_m": 0.4,
+      "contact_min_m": 0.2580176742260283,
+      "contact_max_m": 1.7959823257739715,
+      "stack_max_with_100mm_approach_m": 1.6959823257739715
+    },
+    {
+      "radius_m": 0.5,
+      "contact_min_m": 0.30430532897334617,
+      "contact_max_m": 1.7496946710266537,
+      "stack_max_with_100mm_approach_m": 1.6496946710266536
+    },
+    {
+      "radius_m": 0.6,
+      "contact_min_m": 0.36893340585605394,
+      "contact_max_m": 1.685066594143946,
+      "stack_max_with_100mm_approach_m": 1.585066594143946
+    },
+    {
+      "radius_m": 0.7,
+      "contact_min_m": 0.45804511716071994,
+      "contact_max_m": 1.5959548828392798,
+      "stack_max_with_100mm_approach_m": 1.4959548828392797
+    },
+    {
+      "radius_m": 0.75,
+      "contact_min_m": 0.5156171098231761,
+      "contact_max_m": 1.5383828901768237,
+      "stack_max_with_100mm_approach_m": 1.4383828901768236
+    },
+    {
+      "radius_m": 0.8,
+      "contact_min_m": 0.5862027210815294,
+      "contact_max_m": 1.4677972789184706,
+      "stack_max_with_100mm_approach_m": 1.3677972789184705
+    },
+    {
+      "radius_m": 0.9,
+      "contact_min_m": 0.815218151974682,
+      "contact_max_m": 1.2387818480253179,
+      "stack_max_with_100mm_approach_m": 1.1387818480253178
+    }
+  ],
+  "far_box_cases": [
+    {
+      "box_width_m": 0.25,
+      "far_center_xy_m": [
+        1.175,
+        0.42500000000000004
+      ],
+      "radius_m": 1.24949989995998,
+      "envelope": null
+    },
+    {
+      "box_width_m": 0.3,
+      "far_center_xy_m": [
+        1.1500000000000001,
+        0.4
+      ],
+      "radius_m": 1.2175795661885922,
+      "envelope": null
+    },
+    {
+      "box_width_m": 0.5,
+      "far_center_xy_m": [
+        1.05,
+        0.30000000000000004
+      ],
+      "radius_m": 1.0920164833920778,
+      "envelope": null
+    }
+  ],
+  "rotary_lift_grid": {
+    "base_range_m": [
+      0.75,
+      1.9
+    ],
+    "positions": 81,
+    "heights": 19,
+    "target_pairs": 1539,
+    "failures": [],
+    "note": "Only point reach and sampled vertical segments; no collision or rotation path checks"
+  },
+  "rotary_planar_clearance": {
+    "square_pallet_swept_radius_m": 0.7778174593052023,
+    "pedestal_half_width_m": 0.15,
+    "assumed_clearance_m": 0.05,
+    "minimum_slide_away_m": 0.22781745930520236,
+    "proposed_slide_away_m": 0.25,
+    "pedestal_clearance_after_slide_m": 0.07218254069479771,
+    "note": "Bare pallet planar envelope only; retract robot first. Does not validate loaded-stack swept collisions."
+  },
+  "suction_assumptions_and_calculation": {
+    "box_kg": 3.0,
+    "tool_mass_budget_kg": 0.8,
+    "cup_count": 4,
+    "effective_cup_diameter_m": 0.05,
+    "vacuum_Pa": 30000,
+    "area_efficiency": 0.5,
+    "safety_factor": 2.5,
+    "acceleration_m_s2": 1.0,
+    "mu": 0.3,
+    "estimated_available_N": 117.80972450961725,
+    "required_vertical_N": 81.075,
+    "required_horizontal_N": 98.57500000000002
+  }
+}

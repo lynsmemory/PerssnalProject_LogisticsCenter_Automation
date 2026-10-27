@@ -1,0 +1,280 @@
+{
+  "elapsed_s": 91.53895139694214,
+  "results": [
+    {
+      "box_mm": [
+        360,
+        280,
+        340
+      ],
+      "layers": 3,
+      "all_completed": false,
+      "attempts": [
+        {
+          "start_branch": 0,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 101,
+                "point": [
+                  -0.37806515792432555,
+                  0.12922729098967284,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 70,
+                "point": [
+                  -0.0705155153673547,
+                  -0.3932762092622881,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 1,
+          "failed_box": 2,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 55,
+                "point": [
+                  0.12829026289181383,
+                  0.378391626659983,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 116,
+                "point": [
+                  -0.39316639936858305,
+                  0.07108543296920013,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 2,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 55,
+                "point": [
+                  0.12460845840707245,
+                  0.3796125504593963,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 127,
+                "point": [
+                  -0.6610526315789474,
+                  -0.29000000000000004,
+                  0.59
+                ],
+                "valid_ik": 8,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 3,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 101,
+                "point": [
+                  -0.37806515792432555,
+                  0.12922729098967284,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 70,
+                "point": [
+                  -0.0705155153673547,
+                  -0.3932762092622881,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 4,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 24,
+                "point": [
+                  0.3917628316767165,
+                  0.08075818049362378,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 127,
+                "point": [
+                  -0.6610526315789474,
+                  -0.29000000000000004,
+                  0.59
+                ],
+                "valid_ik": 8,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 5,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 24,
+                "point": [
+                  0.3917628316767165,
+                  0.08075818049362378,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 55,
+                "point": [
+                  0.12829026289181383,
+                  -0.378391626659983,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 6,
+          "failed_box": 1,
+          "layer": 1,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 24,
+                "point": [
+                  0.3917628316767165,
+                  0.08075818049362378,
+                  0.95
+                ],
+                "valid_ik": 4,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 55,
+                "point": [
+                  0.12829026289181383,
+                  -0.378391626659983,
+                  0.95
+                ],
+                "valid_ik": 6,
+                "previous_states": 1
+              }
+            }
+          ]
+        },
+        {
+          "start_branch": 7,
+          "failed_box": 14,
+          "layer": 3,
+          "failures": [
+            {
+              "side": 1,
+              "reason": {
+                "waypoint": 44,
+                "point": [
+                  0.45,
+                  0.0,
+                  1.5192444444444444
+                ],
+                "valid_ik": 0,
+                "previous_states": 1
+              }
+            },
+            {
+              "side": -1,
+              "reason": {
+                "waypoint": 44,
+                "point": [
+                  0.45,
+                  0.0,
+                  1.5192444444444444
+                ],
+                "valid_ik": 0,
+                "previous_states": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

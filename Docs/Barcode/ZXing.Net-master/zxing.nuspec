@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <version>0.17.0</version>
+    <authors>Michael Jahn</authors>
+    <owners>Michael Jahn</owners>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <projectUrl>https://github.com/micjahn/ZXing.Net/</projectUrl>
+    <icon>logo.jpg</icon>
+    <id>ZXing.Net</id>
+    <title>ZXing.Net</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <readme>docs\README.md</readme>
+    <description>
+      ZXing.Net is a port of ZXing, an open-source, multi-format 1D/2D barcode image processing library originally implemented in Java.
+      It has been ported by hand with a lot of optimizations and improvements.
+
+      It is compatible with .Net 2.0/3.5/4.x/5.x/6.x/7.x/8.x/9.x, Windows RT Class Library and Components, UWP, .Net Standard 1.x and 2.0x, .Net Core App 3.x, Silverlight 4, Silverlight 5, Windows Phone 7.x and Windows Phone 8.x and Xamarin.Android</description>
+    <summary>ZXing.Net is a port of ZXing, an open-source, multi-format 1D/2D barcode image processing library originally implemented in Java.</summary>
+    <releaseNotes>* changes of the java version are reflected until 2023/02/21
+* many small bug fixes and improvements</releaseNotes>
+    <tags>ZXing barcode scanning 1D 2D UPC-A UPC-E EAN-8 EAN-13 QR ITF Codabar RSS-14 Data Matrix PDF 417 PDF417 Aztec</tags>
+    <dependencies>
+      <group targetFramework="net20" />
+      <group targetFramework="net35" />
+      <group targetFramework="net40" />
+      <group targetFramework="net45" />
+      <group targetFramework="net461" />
+      <group targetFramework="net47" />
+      <group targetFramework="net48" />
+      <group targetFramework="net50" />
+      <group targetFramework="net60" />
+      <group targetFramework="net70" />
+      <group targetFramework="net80" />
+      <group targetFramework="net90" />
+      <group targetFramework="windows8-managed" />
+      <group targetFramework="windows8" />
+      <group targetFramework="native" />
+      <group targetFramework="portable-win+net40+sl4+sl5+wp7+wp71+wp8" />
+      <group targetFramework="uap10" />
+      <group targetFramework="netstandard1.0">
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="netstandard1.1">
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="netstandard1.3">
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="netstandard2.0">
+        <dependency id="NETStandard.Library" version="2.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="netstandard2.1">
+        <dependency id="NETStandard.Library" version="2.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="netcoreapp3.0" />
+      <group targetFramework="netcoreapp3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Icons\logo.jpg" target="." />
+    <file src="README_NUGET.md" target="docs\README.md" />
+    <file src="Build\Release\net2.0\zxing.dll" target="lib\net20\zxing.dll" />
+    <file src="Build\Release\net2.0\zxing.pdb" target="lib\net20\zxing.pdb" />
+    <file src="Build\Release\net2.0\zxing.XML" target="lib\net20\zxing.XML" />
+    <file src="Build\Release\net3.5\zxing.dll" target="lib\net35\zxing.dll" />
+    <file src="Build\Release\net3.5\zxing.pdb" target="lib\net35\zxing.pdb" />
+    <file src="Build\Release\net3.5\zxing.XML" target="lib\net35\zxing.XML" />
+    <file src="Build\Release\net4.0\zxing.dll" target="lib\net40\zxing.dll" />
+    <file src="Build\Release\net4.0\zxing.pdb" target="lib\net40\zxing.pdb" />
+    <file src="Build\Release\net4.0\zxing.XML" target="lib\net40\zxing.XML" />
+    <file src="Build\Release\net4.0\zxing.presentation.dll" target="lib\net40\zxing.presentation.dll" />
+    <file src="Build\Release\net4.0\zxing.presentation.pdb" target="lib\net40\zxing.presentation.pdb" />
+    <file src="Build\Release\net4.0\zxing.presentation.XML" target="lib\net40\zxing.presentation.XML" />
+    <file src="Build\Release\net4.5\zxing.dll" target="lib\net45\zxing.dll" />
+    <file src="Build\Release\net4.5\zxing.pdb" target="lib\net45\zxing.pdb" />
+    <file src="Build\Release\net4.5\zxing.XML" target="lib\net45\zxing.XML" />
+    <file src="Build\Release\net4.5\zxing.presentation.dll" target="lib\net45\zxing.presentation.dll" />
+    <file src="Build\Release\net4.5\zxing.presentation.pdb" target="lib\net45\zxing.presentation.pdb" />
+    <file src="Build\Release\net4.5\zxing.presentation.XML" target="lib\net45\zxing.presentation.XML" />
+    <file src="Build\Release\net4.6\zxing.dll" target="lib\net461\zxing.dll" />
+    <file src="Build\Release\net4.6\zxing.pdb" target="lib\net461\zxing.pdb" />
+    <file src="Build\Release\net4.6\zxing.XML" target="lib\net461\zxing.XML" />
+    <file src="Build\Release\net4.6\zxing.presentation.dll" target="lib\net461\zxing.presentation.dll" />
+    <file src="Build\Release\net4.6\zxing.presentation.pdb" target="lib\net461\zxing.presentation.pdb" />
+    <file src="Build\Release\net4.6\zxing.presentation.XML" target="lib\net461\zxing.presentation.XML" />
+    <file src="Build\Release\net4.7\zxing.dll" target="lib\net47\zxing.dll" />
+    <file src="Build\Release\net4.7\zxing.pdb" target="lib\net47\zxing.pdb" />
+    <file src="Build\Release\net4.7\zxing.XML" target="lib\net47\zxing.XML" />
+    <file src="Build\Release\net4.7\zxing.presentation.dll" target="lib\net47\zxing.presentation.dll" />
+    <file src="Build\Release\net4.7\zxing.presentation.pdb" target="lib\net47\zxing.presentation.pdb" />
+    <file src="Build\Release\net4.7\zxing.presentation.XML" target="lib\net47\zxing.presentation.XML" />
+    <file src="Build\Release\net4.8\zxing.dll" target="lib\net48\zxing.dll" />
+    <file src="Build\Release\net4.8\zxing.pdb" target="lib\net48\zxing.pdb" />
+    <file src="Build\Release\net4.8\zxing.XML" target="lib\net48\zxing.XML" />
+    <file src="Build\Release\net4.8\zxing.presentation.dll" target="lib\net48\zxing.presentation.dll" />
+    <file src="Build\Release\net4.8\zxing.presentation.pdb" target="lib\net48\zxing.presentation.pdb" />
+    <file src="Build\Release\net4.8\zxing.presentation.XML" target="lib\net48\zxing.presentation.XML" />
+    <file src="Build\Release\net5.0\zxing.dll" target="lib\net5.0\zxing.dll" />
+    <file src="Build\Release\net5.0\zxing.pdb" target="lib\net5.0\zxing.pdb" />
+    <file src="Build\Release\net5.0\zxing.XML" target="lib\net5.0\zxing.XML" />
+    <file src="Build\Release\net6.0\zxing.dll" target="lib\net6.0\zxing.dll" />
+    <file src="Build\Release\net6.0\zxing.pdb" target="lib\net6.0\zxing.pdb" />
+    <file src="Build\Release\net6.0\zxing.XML" target="lib\net6.0\zxing.XML" />
+    <file src="Build\Release\net7.0\zxing.dll" target="lib\net7.0\zxing.dll" />
+    <file src="Build\Release\net7.0\zxing.pdb" target="lib\net7.0\zxing.pdb" />
+    <file src="Build\Release\net7.0\zxing.XML" target="lib\net7.0\zxing.XML" />
+    <file src="Build\Release\net8.0\zxing.dll" target="lib\net8.0\zxing.dll" />
+    <file src="Build\Release\net8.0\zxing.pdb" target="lib\net8.0\zxing.pdb" />
+    <file src="Build\Release\net8.0\zxing.XML" target="lib\net8.0\zxing.XML" />
+    <file src="Build\Release\net9.0\zxing.dll" target="lib\net9.0\zxing.dll" />
+    <file src="Build\Release\net9.0\zxing.pdb" target="lib\net9.0\zxing.pdb" />
+    <file src="Build\Release\net9.0\zxing.XML" target="lib\net9.0\zxing.XML" />
+    <file src="Build\Release\winrt\zxing.winrt.dll" target="lib\windows8-managed\zxing.winrt.dll" />
+    <file src="Build\Release\winrt\zxing.winrt.pdb" target="lib\windows8-managed\zxing.winrt.pdb" />
+    <file src="Build\Release\winrt\zxing.winrt.XML" target="lib\windows8-managed\zxing.winrt.XML" />
+    <file src="Build\Release\winmd\ZXing.winmd" target="lib\windows8\zxing.winmd" />
+    <file src="Build\Release\winmd\ZXing.pdb" target="lib\windows8\zxing.pdb" />
+    <file src="Build\Release\winmd\ZXing.XML" target="lib\windows8\zxing.XML" />
+    <file src="Build\Release\winmd\ZXing.pri" target="lib\windows8\zxing.pri" />
+    <file src="Build\Release\winmd\ZXing.winmd" target="lib\native\zxing.winmd" />
+    <file src="Build\Release\winmd\ZXing.pdb" target="lib\native\zxing.pdb" />
+    <file src="Build\Release\winmd\ZXing.XML" target="lib\native\zxing.XML" />
+    <file src="Build\Release\winmd\ZXing.pri" target="lib\native\zxing.pri" />
+    <file src="Build\Release\portable\zxing.portable.dll" target="lib\portable-win+net40+sl4+sl5+wp7+wp71+wp8\zxing.portable.dll" />
+    <file src="Build\Release\portable\zxing.portable.pdb" target="lib\portable-win+net40+sl4+sl5+wp7+wp71+wp8\zxing.portable.pdb" />
+    <file src="Build\Release\portable\zxing.portable.XML" target="lib\portable-win+net40+sl4+sl5+wp7+wp71+wp8\zxing.portable.XML" />
+    <file src="Build\Release\uwp\zxing.dll" target="lib\uap10\zxing.dll" />
+    <file src="Build\Release\uwp\zxing.pdb" target="lib\uap10\zxing.pdb" />
+    <file src="Build\Release\uwp\zxing.xml" target="lib\uap10\zxing.xml" />
+    <file src="Build\Release\uwp\zxing.pri" target="lib\uap10\zxing.pri" />
+    <file src="Build\Release\netstandard\1.0\zxing.dll" target="lib\netstandard1.0\zxing.dll" />
+    <file src="Build\Release\netstandard\1.0\zxing.pdb" target="lib\netstandard1.0\zxing.pdb" />
+    <file src="Build\Release\netstandard\1.0\zxing.xml" target="lib\netstandard1.0\zxing.xml" />
+    <file src="Build\Release\netstandard\1.1\zxing.dll" target="lib\netstandard1.1\zxing.dll" />
+    <file src="Build\Release\netstandard\1.1\zxing.pdb" target="lib\netstandard1.1\zxing.pdb" />
+    <file src="Build\Release\netstandard\1.1\zxing.xml" target="lib\netstandard1.1\zxing.xml" />
+    <file src="Build\Release\netstandard\1.3\zxing.dll" target="lib\netstandard1.3\zxing.dll" />
+    <file src="Build\Release\netstandard\1.3\zxing.pdb" target="lib\netstandard1.3\zxing.pdb" />
+    <file src="Build\Release\netstandard\1.3\zxing.xml" target="lib\netstandard1.3\zxing.xml" />
+    <file src="Build\Release\netstandard\2.0\zxing.dll" target="lib\netstandard2.0\zxing.dll" />
+    <file src="Build\Release\netstandard\2.0\zxing.pdb" target="lib\netstandard2.0\zxing.pdb" />
+    <file src="Build\Release\netstandard\2.0\zxing.xml" target="lib\netstandard2.0\zxing.xml" />
+    <file src="Build\Release\netstandard\2.1\zxing.dll" target="lib\netstandard2.1\zxing.dll" />
+    <file src="Build\Release\netstandard\2.1\zxing.pdb" target="lib\netstandard2.1\zxing.pdb" />
+    <file src="Build\Release\netstandard\2.1\zxing.xml" target="lib\netstandard2.1\zxing.xml" />
+    <file src="Build\Release\netcoreapp\3.0\zxing.dll" target="lib\netcoreapp3.0\zxing.dll" />
+    <file src="Build\Release\netcoreapp\3.0\zxing.pdb" target="lib\netcoreapp3.0\zxing.pdb" />
+    <file src="Build\Release\netcoreapp\3.0\zxing.xml" target="lib\netcoreapp3.0\zxing.xml" />
+    <file src="Build\Release\netcoreapp\3.1\zxing.dll" target="lib\netcoreapp3.1\zxing.dll" />
+    <file src="Build\Release\netcoreapp\3.1\zxing.pdb" target="lib\netcoreapp3.1\zxing.pdb" />
+    <file src="Build\Release\netcoreapp\3.1\zxing.xml" target="lib\netcoreapp3.1\zxing.xml" />
+  </files>
+</package>

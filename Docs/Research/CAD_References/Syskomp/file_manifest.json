@@ -1,0 +1,280 @@
+{
+  "source_page": "https://syskomp-group.com/en/products/roller-conveyors/",
+  "download_url": "https://syskomp.tools/files/lp/wp-content/uploads/2020/10/Rollenfoerderer_20201009.zip",
+  "zip_sha256": "710629a1de7287254d0556356bdc021d6398bb39a5a7e9682ee61e614566239a",
+  "files": [
+    {
+      "member": "Rollenfoerderer/420mm Breite/Kurve/Kurve B=420 30° SKZC42030.stp",
+      "bytes": 6633821,
+      "sha256": "5e79993b97fc2bcd6686543a14cc0b4e854d2b05568e0a66c0a3cb284a6a2f96",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Kurve/Kurve B=420 45° SKZC42045.stp",
+      "bytes": 6705236,
+      "sha256": "bd301be9b67e5a545ec1c770cb92878aab89f0ca23149f769f6aa6b590e4b9ae",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Kurve/Kurve B=420 60° SKZC42060.stp",
+      "bytes": 6777745,
+      "sha256": "fc19c18d27992dcefa433413e3e188e4e413353de259c4760442f9ea36028228",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Kurve/Kurve B=420 90° SKZC42090.stp",
+      "bytes": 6944081,
+      "sha256": "5bcbdbf20567e9f6beff84886c51af62d32de46e0128e27d8e61ff014418d4ad",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Merge/Merge B=420 30° M1 SKZM1420F30.stp",
+      "bytes": 20377375,
+      "sha256": "6428cfe144436a334e0ba8a03dfbdd941c6321ea11aacbe1952a523efa7c9fda",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 90
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Merge/Merge B=420 30° M2 SKZM2420F30.stp",
+      "bytes": 20402994,
+      "sha256": "2e1e8637ebe377d6d99b681d13ffcf8707f54f2518c27c48d69319a0410b8bdb",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 90
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Merge/Merge B=420 45° M1 SKZM1420F45.stp",
+      "bytes": 19683452,
+      "sha256": "305fef149246f13f26ecf31e8686b49fb6ebd67f7fa383622e15f247ec6d5daf",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 88
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Merge/Merge B=420 45° M2 SKZM2420F45.stp",
+      "bytes": 19692574,
+      "sha256": "b6ae5be8278191ced1375897b0fc7817a2b364de685a8969a9241aa41f49d91e",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 88
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Quertransport/Quertransport B=420 SKRAT420.stp",
+      "bytes": 16362648,
+      "sha256": "58d218fcc14c5358d007482c651e69b7e64ec34f52fd234a43841751f0aa33f9",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 85
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Strecke/Rollenstrecke B=420 L=1000 SKZS4201001000.stp",
+      "bytes": 8132574,
+      "sha256": "03dedb0bc8344b2c8b62b6d50734868696c03b29dd137d6ca23b4c0a94e0136f",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Strecke/Rollenstrecke mit Gurt B=420 L=1050 SKZBS4207510502.stp",
+      "bytes": 20050986,
+      "sha256": "a4a0fa7f38722636e10af96140ee86051b0b952ea00067bf0d879474ea0e3aeb",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 78
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Stuetze/Stuetze B=420.stp",
+      "bytes": 2853940,
+      "sha256": "1423548248021faae6bcc49a87694533660d4aab01508c06107980d6140453b1",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 17
+    },
+    {
+      "member": "Rollenfoerderer/420mm Breite/Umlenksystem/Umlenksystem B=420 SKMAD420.stp",
+      "bytes": 14049681,
+      "sha256": "a6947b5794337c0e75420c2394592a26491f42002aaf9954020c8f9acba9a2ee",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 67
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Kurve/Kurve B=620 30° SKZC62030.stp",
+      "bytes": 6908731,
+      "sha256": "6241da6fea4ee583bcb2008ffaf43c8e0b699e4034389d57536106c86b3913e4",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Kurve/Kurve B=620 45° SKZC62045.stp",
+      "bytes": 6979990,
+      "sha256": "c1a08ce05b35c88b09cebc74f2289e5f39b5aa2da08cd91367c1f546316a770e",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Kurve/Kurve B=620 60° SKZC62060.stp",
+      "bytes": 7052976,
+      "sha256": "f2d3e95e97cd931899a21087322c856a9121692c859225bbac96daf7802dae51",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Kurve/Kurve B=620 90° SKZC62090.stp",
+      "bytes": 7222786,
+      "sha256": "a7ce530fa3cbad789cea539287065c97713afb4cd9ab3ecd8249d027af7df824",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Merge/Merge B=620 30° M1 SKZM1620F30.stp",
+      "bytes": 21669355,
+      "sha256": "3e2955907213d18af6ac1ddddc58ae387344f545444ce4249825e830dff29fab",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 95
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Merge/Merge B=620 30° M2 SKZM2620F30.stp",
+      "bytes": 21706899,
+      "sha256": "e658cd1e5db3de95afdacc42aed36e6c2a46ece785ad22f580156b6c63c8cb2c",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 95
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Merge/Merge B=620 45° M1 SKZM1620F45.stp",
+      "bytes": 20339608,
+      "sha256": "a146949c4a35e33dcff5b5f81797cf6a89902f9eec88a5983dfcf09887e66ce6",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 90
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Merge/Merge B=620 45° M2 SKZM2620F45.stp",
+      "bytes": 20358136,
+      "sha256": "db2bd9a90cc8c38ab1d5ceaa1d4cbc3e793db8e61de0f58472591df2bd3e5fef",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 90
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Quertransport/Quertransport B=620 SKRAT620.stp",
+      "bytes": 15483488,
+      "sha256": "85a1e4906161fb5511f25f41b03aa1c27d07b1842fb8584fae76dc8472ea2662",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 76
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Strecke/Rollenstrecke B=620 L=1000 SKZS6201001000.stp",
+      "bytes": 19512441,
+      "sha256": "b9392ca94232f02e0dd1bf6c61be6bd63c1a6bd149f8d549cf44e6bba1e77488",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 71
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Strecke/Rollenstrecke mit Gurt B=620 L=1050 SKZBS6207510502.stp",
+      "bytes": 20288995,
+      "sha256": "4b46fd42a239dafa67b32bceb2037479bb88de78fa0a11430151af42b0562095",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 78
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Stuetze/Stuetze B=620.stp",
+      "bytes": 3085695,
+      "sha256": "2f38966fa2538e05945043d35273b35e8454e598335bac24634ad5ca259ab56a",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 17
+    },
+    {
+      "member": "Rollenfoerderer/620mm Breite/Umlenksystem/Umlenksystem B=620 SKMAD620.stp",
+      "bytes": 14586382,
+      "sha256": "b22ffe56a737d171392a549162ced517d3ba14bde1ec5874b9fceba0ce49749e",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 67
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Kurve/Kurve B=820 30° SKZC82030.stp",
+      "bytes": 6947590,
+      "sha256": "6b459b8348718c6901661da8383709cfb12ffd8b956defac35153ceb85c8ead3",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Kurve/Kurve B=820 45° SKZC82045.stp",
+      "bytes": 7018584,
+      "sha256": "d31bff2904abe06edfe2d1b934eb634ae0a427a094bb27800f5895eb5ce56fb7",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Kurve/Kurve B=820 60° SKZC82060.stp",
+      "bytes": 7129369,
+      "sha256": "c910666e203948f06182a447b866cd5032b32db876f578749957fbe651b8db1c",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Kurve/Kurve B=820 90° SKZC82090.stp",
+      "bytes": 7261380,
+      "sha256": "911be897aba8e66bbdbef2176394db0ef2d3d3a85d3cea299c41c5e56ef6f10d",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 41
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Merge/Merge B=820 30° M1 SKZM1820F30.stp",
+      "bytes": 22586191,
+      "sha256": "2db75c30efd7a29878497206ef4cccd8a8137dc39bda0f86ddeceecff1f619e7",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 100
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Merge/Merge B=820 30° M2 SKZM2820F30.stp",
+      "bytes": 22657482,
+      "sha256": "48636c1689756f2ae639b150022b012f9f08314e86732c1f72b08a31e882a42c",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 100
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Merge/Merge B=820 45° M1 SKZM1820F45.stp",
+      "bytes": 20868612,
+      "sha256": "8c1bf94aec45396074013ea90f2163da8bc2fe6351311aadafc90a6dd8dd7a21",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 93
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Merge/Merge B=820 45° M2 SKZM2820F45.stp",
+      "bytes": 20897741,
+      "sha256": "5e2bfafc4c432c4d0d99ed12652d413de2aaabbb48d14d7b1ede231ee901bb0e",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 93
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Quertransport/Quertransport B=820 SKRAT820.stp",
+      "bytes": 15655383,
+      "sha256": "76b7ada5c3fd500c2a39005757837adce3e86c7c2405a5bdb986cfbc3c42214d",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 76
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Strecke/Rollenstrecke B=820 L=1000 SKZS8201001000.stp",
+      "bytes": 19513145,
+      "sha256": "cd42237c23c8e55379499e347789ee5364fe3d388171ddae4bcb8db6a1d00199",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 71
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Strecke/Rollenstrecke mit Gurt B=820 L=1050 SKZBS8207510502.stp",
+      "bytes": 20291433,
+      "sha256": "87d59bee8e6eb35d1027738ecec6f6ae51c852d950905f4f6e3392285de41cf5",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 78
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Stuetze/Stuetze B=820.stp",
+      "bytes": 3085725,
+      "sha256": "808f27139b49e5f5c7aac0b0a45a209801a2dcde53194233d1f9edb737493d80",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 17
+    },
+    {
+      "member": "Rollenfoerderer/820mm Breite/Umlenksystem/Umlenksystem B=820 SKMAD820.stp",
+      "bytes": 14811229,
+      "sha256": "9c62999d9dae8ada578b124ba1c625cd5d4a41657536ccff458011ace64b2afe",
+      "step_header_footer": true,
+      "manifold_solid_brep_count": 67
+    }
+  ]
+}

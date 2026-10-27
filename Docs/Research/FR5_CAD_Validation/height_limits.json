@@ -1,0 +1,338 @@
+[
+  {
+    "layer": 1,
+    "xy_m": [
+      -0.7,
+      -0.29
+    ],
+    "contact_m": 0.49,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 8,
+    "absolute_downward_envelope_m": [
+      0.267705626260634,
+      1.2706943737393663
+    ]
+  },
+  {
+    "layer": 1,
+    "xy_m": [
+      -0.7,
+      0.29
+    ],
+    "contact_m": 0.49,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 8,
+    "absolute_downward_envelope_m": [
+      0.267705626260634,
+      1.2706943737393663
+    ]
+  },
+  {
+    "layer": 1,
+    "xy_m": [
+      -0.7,
+      0
+    ],
+    "contact_m": 0.49,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 16,
+    "absolute_downward_envelope_m": [
+      0.20024511716072013,
+      1.3381548828392802
+    ]
+  },
+  {
+    "layer": 1,
+    "xy_m": [
+      -0.33,
+      -0.29
+    ],
+    "contact_m": 0.49,
+    "raw_ik_contact": 16,
+    "raw_ik_approach": 12,
+    "absolute_downward_envelope_m": [
+      0.01646917520270197,
+      1.5219308247972982
+    ]
+  },
+  {
+    "layer": 1,
+    "xy_m": [
+      -0.33,
+      0.29
+    ],
+    "contact_m": 0.49,
+    "raw_ik_contact": 16,
+    "raw_ik_approach": 12,
+    "absolute_downward_envelope_m": [
+      0.01646917520270197,
+      1.5219308247972982
+    ]
+  },
+  {
+    "layer": 1,
+    "xy_m": [
+      -0.33,
+      0
+    ],
+    "contact_m": 0.49,
+    "raw_ik_contact": 16,
+    "raw_ik_approach": 16,
+    "absolute_downward_envelope_m": [
+      -0.022982860250263526,
+      1.5613828602502637
+    ]
+  },
+  {
+    "layer": 2,
+    "xy_m": [
+      -0.7,
+      -0.29
+    ],
+    "contact_m": 0.8300000000000001,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 8,
+    "absolute_downward_envelope_m": [
+      0.267705626260634,
+      1.2706943737393663
+    ]
+  },
+  {
+    "layer": 2,
+    "xy_m": [
+      -0.7,
+      0.29
+    ],
+    "contact_m": 0.8300000000000001,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 8,
+    "absolute_downward_envelope_m": [
+      0.267705626260634,
+      1.2706943737393663
+    ]
+  },
+  {
+    "layer": 2,
+    "xy_m": [
+      -0.7,
+      0
+    ],
+    "contact_m": 0.8300000000000001,
+    "raw_ik_contact": 16,
+    "raw_ik_approach": 12,
+    "absolute_downward_envelope_m": [
+      0.20024511716072013,
+      1.3381548828392802
+    ]
+  },
+  {
+    "layer": 2,
+    "xy_m": [
+      -0.33,
+      -0.29
+    ],
+    "contact_m": 0.8300000000000001,
+    "raw_ik_contact": 16,
+    "raw_ik_approach": 16,
+    "absolute_downward_envelope_m": [
+      0.01646917520270197,
+      1.5219308247972982
+    ]
+  },
+  {
+    "layer": 2,
+    "xy_m": [
+      -0.33,
+      0.29
+    ],
+    "contact_m": 0.8300000000000001,
+    "raw_ik_contact": 16,
+    "raw_ik_approach": 16,
+    "absolute_downward_envelope_m": [
+      0.01646917520270197,
+      1.5219308247972982
+    ]
+  },
+  {
+    "layer": 2,
+    "xy_m": [
+      -0.33,
+      0
+    ],
+    "contact_m": 0.8300000000000001,
+    "raw_ik_contact": 16,
+    "raw_ik_approach": 16,
+    "absolute_downward_envelope_m": [
+      -0.022982860250263526,
+      1.5613828602502637
+    ]
+  },
+  {
+    "layer": 3,
+    "xy_m": [
+      -0.7,
+      -0.29
+    ],
+    "contact_m": 1.17,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 8,
+    "absolute_downward_envelope_m": [
+      0.267705626260634,
+      1.2706943737393663
+    ]
+  },
+  {
+    "layer": 3,
+    "xy_m": [
+      -0.7,
+      0.29
+    ],
+    "contact_m": 1.17,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 8,
+    "absolute_downward_envelope_m": [
+      0.267705626260634,
+      1.2706943737393663
+    ]
+  },
+  {
+    "layer": 3,
+    "xy_m": [
+      -0.7,
+      0
+    ],
+    "contact_m": 1.17,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 8,
+    "absolute_downward_envelope_m": [
+      0.20024511716072013,
+      1.3381548828392802
+    ]
+  },
+  {
+    "layer": 3,
+    "xy_m": [
+      -0.33,
+      -0.29
+    ],
+    "contact_m": 1.17,
+    "raw_ik_contact": 12,
+    "raw_ik_approach": 16,
+    "absolute_downward_envelope_m": [
+      0.01646917520270197,
+      1.5219308247972982
+    ]
+  },
+  {
+    "layer": 3,
+    "xy_m": [
+      -0.33,
+      0.29
+    ],
+    "contact_m": 1.17,
+    "raw_ik_contact": 12,
+    "raw_ik_approach": 16,
+    "absolute_downward_envelope_m": [
+      0.01646917520270197,
+      1.5219308247972982
+    ]
+  },
+  {
+    "layer": 3,
+    "xy_m": [
+      -0.33,
+      0
+    ],
+    "contact_m": 1.17,
+    "raw_ik_contact": 12,
+    "raw_ik_approach": 16,
+    "absolute_downward_envelope_m": [
+      -0.022982860250263526,
+      1.5613828602502637
+    ]
+  },
+  {
+    "layer": 4,
+    "xy_m": [
+      -0.7,
+      -0.29
+    ],
+    "contact_m": 1.51,
+    "raw_ik_contact": 0,
+    "raw_ik_approach": 0,
+    "absolute_downward_envelope_m": [
+      0.267705626260634,
+      1.2706943737393663
+    ]
+  },
+  {
+    "layer": 4,
+    "xy_m": [
+      -0.7,
+      0.29
+    ],
+    "contact_m": 1.51,
+    "raw_ik_contact": 0,
+    "raw_ik_approach": 0,
+    "absolute_downward_envelope_m": [
+      0.267705626260634,
+      1.2706943737393663
+    ]
+  },
+  {
+    "layer": 4,
+    "xy_m": [
+      -0.7,
+      0
+    ],
+    "contact_m": 1.51,
+    "raw_ik_contact": 0,
+    "raw_ik_approach": 0,
+    "absolute_downward_envelope_m": [
+      0.20024511716072013,
+      1.3381548828392802
+    ]
+  },
+  {
+    "layer": 4,
+    "xy_m": [
+      -0.33,
+      -0.29
+    ],
+    "contact_m": 1.51,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 0,
+    "absolute_downward_envelope_m": [
+      0.01646917520270197,
+      1.5219308247972982
+    ]
+  },
+  {
+    "layer": 4,
+    "xy_m": [
+      -0.33,
+      0.29
+    ],
+    "contact_m": 1.51,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 0,
+    "absolute_downward_envelope_m": [
+      0.01646917520270197,
+      1.5219308247972982
+    ]
+  },
+  {
+    "layer": 4,
+    "xy_m": [
+      -0.33,
+      0
+    ],
+    "contact_m": 1.51,
+    "raw_ik_contact": 8,
+    "raw_ik_approach": 0,
+    "absolute_downward_envelope_m": [
+      -0.022982860250263526,
+      1.5613828602502637
+    ]
+  }
+]

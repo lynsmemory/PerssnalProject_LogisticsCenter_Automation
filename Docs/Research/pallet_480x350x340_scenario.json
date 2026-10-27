@@ -1,0 +1,77 @@
+{
+  "scenario": "hypothetical 480x350x340; not confirmed replacement",
+  "pallet_mm": [
+    1100,
+    1100,
+    150
+  ],
+  "box_mm": [
+    480,
+    350,
+    340
+  ],
+  "box_gap_mm": 10,
+  "pattern_dimensions_mm": [
+    970,
+    1070
+  ],
+  "truck_height_mm": [
+    2300,
+    2400
+  ],
+  "truck_height_only_max_layers": [
+    6,
+    6
+  ],
+  "truck_height_only_6_layer_total_height_mm": 2190,
+  "truck_height_only_boxes_per_pallet": 36,
+  "robot_proposed_layout": {
+    "base_mm": 950,
+    "axis_to_near_pallet_edge_mm": 150,
+    "tool_mm": 125,
+    "centers_xy_mm": [
+      [
+        -390,
+        -360
+      ],
+      [
+        -390,
+        0
+      ],
+      [
+        -390,
+        360
+      ],
+      [
+        -880,
+        -360
+      ],
+      [
+        -880,
+        0
+      ],
+      [
+        -880,
+        360
+      ]
+    ],
+    "optimistic_downward_horizontal_radius_mm": 927.6458645948894,
+    "farthest_center_radius_mm": 950.789145920377,
+    "radially_unreachable_centers": [
+      [
+        -880,
+        -360
+      ],
+      [
+        -880,
+        360
+      ]
+    ]
+  },
+  "limitations": [
+    "truck-height arithmetic is not FR5 reach validation",
+    "single stationary robot; no pallet rotation or translation",
+    "pattern placed at near pallet edge; centered y",
+    "cannot approve 6-layer36-box FR5 palletizing from height arithmetic"
+  ]
+}
