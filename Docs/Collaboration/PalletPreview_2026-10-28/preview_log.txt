@@ -1,0 +1,43 @@
+OK   WingBody5t_Coupang(Clone)/TopBoard_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/TopBoard_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/TopBoard_3: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/TopBoard_4: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/TopBoard_5: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/BottomRunner_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/SupportBlock_1_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/SupportBlock_1_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/SupportBlock_1_3: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/BottomRunner_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/SupportBlock_2_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/SupportBlock_2_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/SupportBlock_2_3: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/BottomRunner_3: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/SupportBlock_3_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/SupportBlock_3_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/SupportBlock_3_3: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_1_1_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_1_1_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_1_2_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_1_2_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_2_1_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_2_1_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_2_2_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_2_2_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_3_1_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_3_1_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_3_2_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_3_2_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_4_1_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_4_1_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_4_2_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_4_2_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_5_1_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_5_1_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_5_2_1: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/Nail_5_2_2: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+bounds center=(0.000, 0.075, 0.000) size=(1.100, 0.150, 1.100)
+saved C:/Users/LYN/Desktop/Unity/PerssnalProject_LogisticsCenter_Automation/Docs/Collaboration/PalletPreview_2026-10-28\front.png camera=(0.00, 0.08, 3.08)
+saved C:/Users/LYN/Desktop/Unity/PerssnalProject_LogisticsCenter_Automation/Docs/Collaboration/PalletPreview_2026-10-28\side.png camera=(3.08, 0.08, 0.00)
+saved C:/Users/LYN/Desktop/Unity/PerssnalProject_LogisticsCenter_Automation/Docs/Collaboration/PalletPreview_2026-10-28\oblique.png camera=(1.61, 1.08, 2.42)
+saved C:/Users/LYN/Desktop/Unity/PerssnalProject_LogisticsCenter_Automation/Docs/Collaboration/PalletPreview_2026-10-28\oblique_rear.png camera=(-1.61, 1.08, -2.42)
+failures=0

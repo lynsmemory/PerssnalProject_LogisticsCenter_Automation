@@ -1,0 +1,25 @@
+Assets/Prefabs/UI/InstructionMenu.prefab
+Assets/Prefabs/UI/ModalCanvas.prefab
+Assets/Prefabs/env/immersiveTraining_screen_prefab.prefab
+Assets/Prefabs/env/tablet_prefab.prefab
+Assets/Prefabs/moto_bot/moto_prefab.prefab
+Assets/Prefabs/moto_training_parts/arm_chassis.prefab
+Assets/Prefabs/moto_training_parts/body_front.prefab
+Assets/Prefabs/moto_training_parts/body_main.prefab
+Assets/Prefabs/moto_training_parts/bridge.prefab
+Assets/Prefabs/moto_training_parts/cable_housing.prefab
+Assets/Prefabs/moto_training_parts/cables.prefab
+Assets/Prefabs/moto_training_parts/chassis_support.prefab
+Assets/Prefabs/moto_training_parts/claw.prefab
+Assets/Prefabs/moto_training_parts/frame_cover.prefab
+Assets/Prefabs/moto_training_parts/gliders_left.prefab
+Assets/Prefabs/moto_training_parts/gliders_right.prefab
+Assets/Prefabs/moto_training_parts/inner_shaft.prefab
+Assets/Prefabs/moto_training_parts/motor.prefab
+Assets/Prefabs/moto_training_parts/outer_shaft.prefab
+Assets/Prefabs/moto_training_parts/shelf_Gliders_GRP_left.prefab
+Assets/Prefabs/moto_training_parts/shelf_Gliders_GRP_right.prefab
+Assets/Scenes/urp_scene_with_training.unity
+Assets/Prefabs/moto_bot/moto_bot_forassembly.prefab
+Assets/Scenes/project_prefabs.unity
+Assets/Prefabs/moto_bot/assembly_instruction Variant.prefab

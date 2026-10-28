@@ -1,0 +1,44 @@
+OK   WingBody5t_Coupang(Clone)/CargoFloor: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/CargoFrontWall: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RoofCentre: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/WingRoof: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/WingSide: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/CoupangSideLogo: mesh=Quad verts=4 subMeshes=1 materials=1 normals=4
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/LeftWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RearDoorLeftPivot/RearDoor: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RearDoorLeftPivot/LockBar: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RearLamp: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/WingRoof: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/WingSide: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/CoupangSideLogo: mesh=Quad verts=4 subMeshes=1 materials=1 normals=4
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RightWingPivot/SideRib: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RearDoorRightPivot/RearDoor: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RearDoorRightPivot/LockBar: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/RearLamp: mesh=Cube verts=24 subMeshes=1 materials=1 normals=24
+OK   WingBody5t_Coupang(Clone)/CabDoorLogo: mesh=Quad verts=4 subMeshes=1 materials=1 normals=4
+OK   WingBody5t_Coupang(Clone)/CabDoorLogo: mesh=Quad verts=4 subMeshes=1 materials=1 normals=4
+OK   WingBody5t_Coupang(Clone)/CabShell: mesh=CabShell verts=816 subMeshes=3 materials=3 normals=816
+OK   WingBody5t_Coupang(Clone)/CabGlass: mesh=CabGlass verts=369 subMeshes=1 materials=1 normals=369
+OK   WingBody5t_Coupang(Clone)/CabFront: mesh=CabFront verts=1112 subMeshes=4 materials=4 normals=1112
+OK   WingBody5t_Coupang(Clone)/Wheels: mesh=Wheels verts=8040 subMeshes=3 materials=3 normals=8040
+OK   WingBody5t_Coupang(Clone)/Underbody: mesh=Underbody verts=1430 subMeshes=2 materials=2 normals=1430
+bounds center=(0.000, 1.790, 0.646) size=(2.720, 3.580, 8.813)
+saved C:/Users/LYN/AppData/Local/Temp/claude/C--Users-LYN--claude-spares-spare-UgYvQq/2a653ce3-32fd-445e-b0f3-ac78dd0186ee/scratchpad/render\front.png camera=(0.00, 1.79, 20.14)
+saved C:/Users/LYN/AppData/Local/Temp/claude/C--Users-LYN--claude-spares-spare-UgYvQq/2a653ce3-32fd-445e-b0f3-ac78dd0186ee/scratchpad/render\side.png camera=(19.49, 1.79, 0.65)
+saved C:/Users/LYN/AppData/Local/Temp/claude/C--Users-LYN--claude-spares-spare-UgYvQq/2a653ce3-32fd-445e-b0f3-ac78dd0186ee/scratchpad/render\oblique.png camera=(10.22, 8.18, 15.97)
+saved C:/Users/LYN/AppData/Local/Temp/claude/C--Users-LYN--claude-spares-spare-UgYvQq/2a653ce3-32fd-445e-b0f3-ac78dd0186ee/scratchpad/render\oblique_rear.png camera=(-10.22, 8.18, -14.68)
+failures=0
