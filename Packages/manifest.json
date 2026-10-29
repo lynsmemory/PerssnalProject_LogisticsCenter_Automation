@@ -18,6 +18,7 @@
     "com.unity.render-pipelines.core": "17.6.0",
     "com.unity.render-pipelines.universal": "17.6.0",
     "com.unity.render-pipelines.universal-config": "17.6.0",
+    "com.unity.robotics.urdf-importer": "https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer#v0.5.2",
     "com.unity.searcher": "4.9.5",
     "com.unity.settings-manager": "2.1.1",
     "com.unity.shadergraph": "17.6.0",

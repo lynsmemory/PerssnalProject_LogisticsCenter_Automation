@@ -45,3 +45,4 @@ __pycache__/
 /Docs/Collaboration/*.jsonl
 /Docs/Collaboration/Claude_Link_Check.json
 *.bak
+/mono_crash.*
