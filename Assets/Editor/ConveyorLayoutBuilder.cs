@@ -677,14 +677,14 @@ public static class ConveyorLayoutBuilder
         foreach (var d in diverters)
         {
             var diverter = d;
-            diverter.DivertStarted += b => log.AppendLine($"t={now,6:F1} {diverter.LaneId} arm out for {b.name}");
+            diverter.DivertStarted += b => log.AppendLine($"t={now,6:F1} {diverter.Lane} arm out for {b.name}");
             diverter.Diverted += b =>
             {
-                log.AppendLine($"t={now,6:F1} {diverter.LaneId} diverted {b.name}");
-                if (diverter.LaneId == "L02") diverter.AcceptsBoxes = false;
+                log.AppendLine($"t={now,6:F1} {diverter.Lane} diverted {b.name}");
+                if (diverter.Lane == Logistics.DestinationLane.Lane2) diverter.AcceptsBoxes = false;
             };
-            diverter.DivertFailed += b => log.AppendLine($"t={now,6:F1} {diverter.LaneId} DIVERT FAILED {b.name}");
-            if (diverter.LaneId == "L02") lane2 = diverter;
+            diverter.DivertFailed += b => log.AppendLine($"t={now,6:F1} {diverter.Lane} DIVERT FAILED {b.name}");
+            if (diverter.Lane == Logistics.DestinationLane.Lane2) lane2 = diverter;
         }
         Physics.simulationMode = SimulationMode.Script;
         Physics.SyncTransforms();
@@ -701,7 +701,7 @@ public static class ConveyorLayoutBuilder
             if (next < schedule.Length && now >= schedule[next].t)
             {
                 var b = TestBox($"Box{next + 1}_{schedule[next].read ?? "unread"}", spawn);
-                if (schedule[next].read != null) b.gameObject.AddComponent<Logistics.BoxRouting>().SetReadResult(schedule[next].read);
+                if (schedule[next].read != null && Logistics.BarcodeScanner.TryParseLane(schedule[next].read, out var readLane)) b.gameObject.AddComponent<Logistics.LogisticsBox>().SetReadResult(readLane);
                 boxes.Add(b);
                 next++;
             }
@@ -721,7 +721,7 @@ public static class ConveyorLayoutBuilder
                 if (b != null)
                 {
                     var row = new StringBuilder($"  trace t={now,6:F2} {b.name} pos={b.position:F3} yaw={b.rotation.eulerAngles.y:F0} v={b.linearVelocity:F2}");
-                    foreach (var d in diverters) row.Append($" {d.LaneId}arm={d.transform.GetComponentInChildren<Rigidbody>().rotation.eulerAngles.y:F0}");
+                    foreach (var d in diverters) row.Append($" {d.Lane}arm={d.transform.GetComponentInChildren<Rigidbody>().rotation.eulerAngles.y:F0}");
                     foreach (var c in Physics.OverlapBox(b.position, b.transform.localScale * 0.5f + Vector3.one * 0.02f, b.rotation))
                         if (c.attachedRigidbody != b) row.Append($" [{c.name}]");
                     log.AppendLine(row.ToString());
