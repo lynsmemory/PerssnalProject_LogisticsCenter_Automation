@@ -113,7 +113,7 @@ namespace Logistics
                 DestinationLane candidate = labelSequence[i];
                 LaneOccupancyMonitor monitor = MonitorFor(candidate);
                 LaneProcessController process = laneProcesses != null ? Array.Find(laneProcesses, p => p != null && p.Lane == candidate) : null;
-                bool unavailable = process != null && (process.IsHaltedByFailure || (process.UsesRobot && process.Pallet.IsComplete));
+                bool unavailable = process != null && (process.IsHaltedByFailure || (process.UsesRobot && (process.Pallet.IsComplete || !process.IsPalletReady)));
                 if (!unavailable && (monitor == null || !monitor.IsCongested) && !availableLanes.Contains(candidate))
                 {
                     availableLanes.Add(candidate);

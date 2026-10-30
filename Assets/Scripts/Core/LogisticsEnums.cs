@@ -49,6 +49,7 @@ namespace Logistics
     }
 
     // AMR 설비 상태 (화면 표시) (FR-13~15, FR-18)
+    // 설계 열거형 밖 추가 값: WaitingForRoute = 경로가 없어 재탐색 대기, Faulted = 도달 불가·상차 재시도 초과·화물 수 불일치로 고장 정지 (이유는 FaultReason)
     public enum ForkliftState
     {
         Idle,
@@ -57,7 +58,9 @@ namespace Logistics
         MovingToDock,
         Loading,
         Returning,
-        StoppedByObstacle
+        StoppedByObstacle,
+        WaitingForRoute,
+        Faulted
     }
 
     // 흡착 결과 (FR-09). 붙지 못한 이유를 구분해 PalletizingSequence가 실패로 처리한다

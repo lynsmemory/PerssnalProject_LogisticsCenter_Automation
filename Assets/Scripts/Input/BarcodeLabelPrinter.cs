@@ -11,7 +11,7 @@ namespace Logistics
     public class BarcodeLabelPrinter : MonoBehaviour
     {
         #region 1. 연결과 설정
-        [Tooltip("라벨 이미지 가로 픽셀 (Codex 샘플 PNG와 같은 512)")]
+        [Tooltip("라벨 이미지 가로 픽셀 (바코드 샘플 PNG와 같은 512)")]
         [SerializeField, Min(64)] private int labelWidth = 512;
 
         [Tooltip("라벨 이미지 세로 픽셀")]
