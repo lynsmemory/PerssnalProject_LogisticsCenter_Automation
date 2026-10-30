@@ -5,8 +5,11 @@ using UnityEngine;
 namespace Logistics
 {
     // 레인 하나와 전담 설비를 묶고, 중간 스토퍼 방출 → 픽업 정렬 → (로봇 적재) 순서를 진행한다. 레인당 1개. (FR-13, FR-19, FR-20, FR-22)
-    // 지금은 레인 설비(집계·스토퍼·픽업)까지 연결한다. FR5 적재(PalletizingSequence)·파레트·AMR·도크는 해당 클래스 작성 후 연결한다.
-    // 로봇 연결 전 시험용으로 simulatedPickSeconds > 0이면 정렬된 박스를 그 시간 뒤 공정에서 빼서(로봇이 집어 간 것으로) 다음 박스를 받는다.
+    // 레인 설비(집계·스토퍼·픽업)와 FR5 적재(PalletizingSequence)·파레트(PalletLoadState)를 연결한다. AMR·도크는 해당 클래스 작성 후 연결한다.
+    // palletizing·pallet가 연결되어 있으면 정렬된 박스를 로봇이 실제로 적재하고, 놓인 위치 확인까지 성공했을 때만 처리 수를 늘린다.
+    // 로봇이 연결되지 않은 레인만 시험용 simulatedPickSeconds(> 0)로 정렬된 박스를 그 시간 뒤 공정에서 뺀다(로봇 대체).
+    // 로봇 적재는 레인 루프와 병행해 돌고(한 번에 하나), 로봇이 박스를 들어 올려 픽업 구역을 벗어나면(PalletizingSequence.State가 Picking이 아님)
+    // 적재·복귀를 기다리지 않고 다음 박스를 방출한다. 진행 중인 박스까지 세어 파레트 자리가 남을 때만 방출한다.
     public class LaneProcessController : MonoBehaviour
     {
         #region 1. 연결과 설정
@@ -22,10 +25,16 @@ namespace Logistics
         [Tooltip("픽업 구역")]
         [SerializeField] private PickupZoneAligner pickupZone;
 
+        [Tooltip("이 레인 FR5 적재 순서")]
+        [SerializeField] private PalletizingSequence palletizing;
+
+        [Tooltip("이 레인 파레트")]
+        [SerializeField] private PalletLoadState pallet;
+
         [Tooltip("박스 정리 (로봇 대체 시험에서 집어 간 박스 제거)")]
         [SerializeField] private BoxSpawner boxSpawner;
 
-        [Tooltip("로봇 연결 전 시험용: 정렬 후 이 시간(초)이 지나면 박스를 집어 간 것으로 처리. 0이면 사용 안 함")]
+        [Tooltip("로봇 대체 시험용: palletizing·pallet가 연결되지 않았을 때만 쓴다. 정렬 후 이 시간(초)이 지나면 박스를 집어 간 것으로 처리. 0이면 사용 안 함")]
         [SerializeField, Min(0f)] private float simulatedPickSeconds = 0f;
 
         [Tooltip("방출 조건 확인 주기 (초)")]
@@ -49,6 +58,13 @@ namespace Logistics
         public MiddleStopper MiddleStopper => middleStopper;
         public PickupZoneAligner PickupZone => pickupZone;
         public bool IsRunning => loop != null;
+        public PalletizingSequence Palletizing => palletizing;
+        public PalletLoadState Pallet => pallet;
+        // 로봇 적재가 연결되어 있음 (대체 타이머 대신 실제 적재)
+        public bool UsesRobot => palletizing != null && pallet != null;
+        // 적재 실패로 멈춤 (실패 후 처리 규칙은 SRS상 시험 후 결정)
+        public bool IsHaltedByFailure { get; private set; }
+        public bool PalletCompleteSignaled { get; private set; }   // 6×L 완료 신호를 보냈음 (AMR 반출 전까지 적재 중지)
         // 이 레인에서 처리(픽업 완료)한 박스 수
         public int ProcessedCount { get; private set; }
 
@@ -81,9 +97,13 @@ namespace Logistics
             inTransit = null;
         }
 
-        // 설정 적용 후 레인 운전 시작
+        // 설정 적용 후 레인 운전 시작 (적재 층 수 L을 파레트에 전달)
         public void Begin(SimulationSettings settings)
         {
+            if (pallet != null && settings != null)
+            {
+                pallet.Configure(settings.PalletLayerCount);
+            }
             if (loop == null)
             {
                 loop = StartCoroutine(RunLaneLoop());
@@ -94,12 +114,28 @@ namespace Logistics
         public void Pause() { }
         public void Resume() { }
 
-        // 방출 → 적재 반복 코루틴. 픽업 구역이 비고 FR5가 취급 중이 아닐 때만 방출
+        // 방출 판단 반복 코루틴. 다음 박스는 "앞서 방출한 박스 도착 + 픽업 구역 빔 + 로봇이 픽업 구역을 벗어남 + 방출 금지 상태 아님"일 때 1개 방출
         private IEnumerator RunLaneLoop()
         {
             var wait = new WaitForSeconds(pollInterval);
+            bool placing = false;   // 이 루프가 시작한 로봇 적재가 진행 중
             while (true)
             {
+                // 실패/완료 결과를 다음 방출보다 먼저 반영한다. 실패 직후 빈 픽업으로 추가 방출하지 않는다.
+                if (placing && !palletizing.IsBusy)
+                {
+                    placing = false;
+                    if (palletizing.LastResult == PalletizingResult.Success)
+                    {
+                        OnBoxProcessed();
+                        if (pallet.IsComplete) OnPalletCompleted();
+                    }
+                    else
+                    {
+                        IsHaltedByFailure = true;
+                        Debug.LogWarning($"[LaneProcessController {lane}] 적재 실패 {palletizing.LastResult} (놓인 위치 오차 {palletizing.LastPlaceError * 1000f:F0}mm). 이 레인 적재를 멈춤", this);
+                    }
+                }
                 //1. 픽업 구역이 비고 앞서 방출한 박스가 픽업에 도착했으면 중간 스토퍼에서 1개 방출
                 //   (방출한 박스가 경사 구간을 내려가는 동안 다음 박스를 내보내지 않는다: 중간 1·픽업 1 제한)
                 if (inTransit != null && Time.time - releasedAt > transitTimeout && !transitWarned)
@@ -107,13 +143,22 @@ namespace Logistics
                     transitWarned = true;
                     Debug.LogWarning($"[LaneProcessController {lane}] 방출한 {inTransit.name}가 {transitTimeout:F0}초 안에 픽업에 도착하지 않음", this);
                 }
-                if (inTransit == null && pickupZone != null && pickupZone.IsEmpty && middleStopper != null && !middleStopper.IsBusy && middleStopper.HasWaitingBox)
+                //   로봇 연결 레인: 실패로 멈추지 않았고, 로봇이 픽업 구역을 벗어났고(Picking 아님), 진행 중 박스까지 세어 파레트 자리가 남을 때만
+                bool robotAllows = !UsesRobot ||
+                    (!IsHaltedByFailure && palletizing.State != PalletizingState.Picking && pallet.PlacedCount + (palletizing.State == PalletizingState.Placing ? 1 : 0) < pallet.Capacity);
+                if (inTransit == null && robotAllows && pickupZone != null && pickupZone.IsEmpty && middleStopper != null && !middleStopper.IsBusy && middleStopper.HasWaitingBox)
                 {
                     middleStopper.ReleaseOne();
                 }
 
-                //2. 정렬된 박스: 로봇 연결 전 시험이면 일정 시간 뒤 집어 간 것으로 처리
-                if (pickupZone != null && pickupZone.CurrentBox != null && simulatedPickSeconds > 0f)
+                //3. 정렬된 박스: 로봇이 연결되어 있고 적재 중이 아니면 적재 시작 (파레트 완료·실패로 멈춘 동안은 대기)
+                if (UsesRobot && !placing && pickupZone != null && pickupZone.CurrentBox != null && !IsHaltedByFailure && !pallet.IsComplete)
+                {
+                    StartCoroutine(palletizing.PickAndPlace(pickupZone, pallet));
+                    placing = true;
+                }
+                //4. 로봇이 연결되지 않은 레인: 시험용 대체 타이머로 일정 시간 뒤 집어 간 것으로 처리
+                else if (!UsesRobot && pickupZone != null && pickupZone.CurrentBox != null && simulatedPickSeconds > 0f)
                 {
                     LogisticsBox box = pickupZone.CurrentBox;
                     // 대기 중에 처리 시간이 바뀌어도 반영되도록 매 프레임 확인한다
@@ -141,19 +186,32 @@ namespace Logistics
             BoxProcessed?.Invoke(lane);
         }
 
+        // 적재 완료(6×L) 신호를 전담 AMR에 1회 전달한다. AMR 연결(WBS 56·57) 전에는 신호만 기록하고 이 레인 적재를 멈춘다
+        private void OnPalletCompleted()
+        {
+            if (PalletCompleteSignaled)
+            {
+                return;
+            }
+            PalletCompleteSignaled = true;
+            Debug.Log($"[LaneProcessController {lane}] 파레트 적재 완료 {pallet.PlacedCount}/{pallet.Capacity}. AMR 반출 대기", this);
+        }
+
         // 초기화 버튼: 레인 순서 진행 중지, 레인 설비 초기화 호출
         public void ResetToInitialState()
         {
-            if (loop != null)
-            {
-                StopCoroutine(loop);
-                loop = null;
-            }
+            // 레인 루프와 진행 중인 로봇 적재 코루틴을 함께 멈춘다
+            StopAllCoroutines();
+            loop = null;
             if (occupancyMonitor != null) occupancyMonitor.ResetToInitialState();
             if (middleStopper != null) middleStopper.ResetToInitialState();
             if (pickupZone != null) pickupZone.ResetToInitialState();
+            if (palletizing != null) palletizing.ResetToInitialState();
+            if (pallet != null) pallet.ResetToInitialState();
             inTransit = null;
             ProcessedCount = 0;
+            IsHaltedByFailure = false;
+            PalletCompleteSignaled = false;
         }
         #endregion
     }

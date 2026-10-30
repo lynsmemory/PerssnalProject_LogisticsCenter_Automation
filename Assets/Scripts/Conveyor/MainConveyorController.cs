@@ -16,6 +16,9 @@ namespace Logistics
         [Tooltip("같이 구동할 다른 컨베이어 루트 (투입 라인 EntryLine)")]
         [SerializeField] private Transform[] extraRoots = new Transform[0];
 
+        [Tooltip("신규 투입 전용 루트. 이 루트만 재순환 대기 중 정지하며 메인 합류 구동면은 포함하지 않는다")]
+        [SerializeField] private Transform inputRoot;
+
         [Tooltip("기준 속도 배율 1에서의 벨트 속도 (m/s). 0이면 각 컨베이어에 저장된 속도를 그대로 쓴다")]
         [SerializeField, Min(0f)] private float baseSpeed = 0f;
         #endregion
@@ -26,14 +29,17 @@ namespace Logistics
             public LinearConveyor linear;
             public CurvedConveyor curved;
             public float signedSpeed;
+            public bool input;
         }
 
         private readonly List<Drive> drives = new List<Drive>();
+        private readonly HashSet<Behaviour> restingInputDrives = new HashSet<Behaviour>();
         private LaneDiverter[] diverters = new LaneDiverter[0];
 
         public bool IsRunning { get; private set; }
         public float SpeedMultiplier { get; private set; } = 1f;
         public int ConveyorCount => drives.Count;
+        public bool IsInputBlocked { get; private set; }
         #endregion
 
         #region 3. 수집
@@ -52,6 +58,27 @@ namespace Logistics
             }
         }
 
+        private void FixedUpdate()
+        {
+            if (!IsInputBlocked) return;
+            // 감속이 끝나면 정지 모터의 0거리 MovePosition 호출을 쉬게 한다.
+            // 충돌체/Rigidbody는 유지해 정지 벨트 위 박스가 자연스럽게 쉴 수 있게 한다.
+            foreach (Drive d in drives)
+            {
+                if (!d.input) continue;
+                if (d.linear != null && d.linear.enabled && Mathf.Abs(d.linear.CurrentSpeed) < 0.001f)
+                {
+                    restingInputDrives.Add(d.linear);
+                    d.linear.enabled = false;
+                }
+                if (d.curved != null && d.curved.enabled && Mathf.Abs(d.curved.CurrentSpeed) < 0.001f)
+                {
+                    restingInputDrives.Add(d.curved);
+                    d.curved.enabled = false;
+                }
+            }
+        }
+
         private void Collect()
         {
             drives.Clear();
@@ -66,11 +93,11 @@ namespace Logistics
                 }
                 foreach (LinearConveyor c in root.GetComponentsInChildren<LinearConveyor>(true))
                 {
-                    drives.Add(new Drive { linear = c, signedSpeed = Signed(c.Motor) });
+                    drives.Add(new Drive { linear = c, signedSpeed = Signed(c.Motor), input = inputRoot != null && c.transform.IsChildOf(inputRoot) });
                 }
                 foreach (CurvedConveyor c in root.GetComponentsInChildren<CurvedConveyor>(true))
                 {
-                    drives.Add(new Drive { curved = c, signedSpeed = Signed(c.Motor) });
+                    drives.Add(new Drive { curved = c, signedSpeed = Signed(c.Motor), input = inputRoot != null && c.transform.IsChildOf(inputRoot) });
                 }
             }
 
@@ -97,8 +124,9 @@ namespace Logistics
             ApplySpeed();
             foreach (Drive d in drives)
             {
-                if (d.linear != null) d.linear.Play();
-                if (d.curved != null) d.curved.Play();
+                bool run = !d.input || !IsInputBlocked;
+                if (d.linear != null) { if (run) d.linear.Play(); else d.linear.Stop(); }
+                if (d.curved != null) { if (run) d.curved.Play(); else d.curved.Stop(); }
             }
             foreach (LaneDiverter diverter in diverters)
             {
@@ -120,6 +148,24 @@ namespace Logistics
                 diverter.Stop();
             }
             IsRunning = false;
+        }
+
+        // 메인은 계속 운전하고 투입선 모터만 감속 정지/재개한다.
+        public void SetInputBlocked(bool blocked)
+        {
+            IsInputBlocked = blocked;
+            if (!blocked)
+            {
+                foreach (var drive in restingInputDrives) if (drive != null) drive.enabled = true;
+                restingInputDrives.Clear();
+            }
+            foreach (Drive d in drives)
+            {
+                if (!d.input) continue;
+                bool run = IsRunning && !blocked;
+                if (d.linear != null) { if (run) d.linear.Play(); else d.linear.Stop(); }
+                if (d.curved != null) { if (run) d.curved.Play(); else d.curved.Stop(); }
+            }
         }
 
         // 속도 배율 적용
@@ -147,6 +193,8 @@ namespace Logistics
         public void ResetToInitialState()
         {
             Stop();
+            SetInputBlocked(false);
+            foreach (var d in diverters) d.ResetToInitialState();
             SetSpeedMultiplier(1f);
         }
         #endregion

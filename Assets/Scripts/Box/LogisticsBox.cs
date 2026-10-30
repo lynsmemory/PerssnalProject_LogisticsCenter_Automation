@@ -29,6 +29,9 @@ namespace Logistics
         public bool HasReadResult { get; private set; }
 
         public Rigidbody Body { get; private set; }
+
+        // 흡착 툴이 들고 있음 (VacuumGripper가 설정). 픽업 정렬기·레인 감속 구역이 이 박스를 건드리지 않게 한다
+        public bool IsHeld { get; private set; }
         #endregion
 
         #region 3. 라벨과 판독 결과
@@ -68,6 +71,27 @@ namespace Logistics
         public void ClearReadResult()
         {
             HasReadResult = false;
+        }
+
+        // 파레트에 놓인 박스: 공정이 끝났으므로 다시 잠들 수 있게 하고(기본 sleepThreshold) 쌓임 해석 반복을 높인다.
+        // 잠들지 않는 박스를 여러 층 쌓으면 미세 떨림으로 조금씩 미끄러진다 (10/30 적재 시험: 로봇 접촉 없이 2단 박스 8~13 mm 밀림)
+        public void SetPlacedOnPallet()
+        {
+            if (Body == null)
+            {
+                return;
+            }
+            Body.sleepThreshold = Physics.sleepThreshold;
+            Body.solverIterations = Mathf.Max(Body.solverIterations, placedSolverIterations);
+            Body.solverVelocityIterations = Mathf.Max(Body.solverVelocityIterations, placedSolverIterations);
+        }
+
+        private const int placedSolverIterations = 16;   // 파레트 위 박스 해석 반복 횟수
+
+        // 흡착 상태 기록 (VacuumGripper 전용)
+        public void SetHeld(bool held)
+        {
+            IsHeld = held;
         }
         #endregion
     }

@@ -59,4 +59,29 @@ namespace Logistics
         Returning,
         StoppedByObstacle
     }
+
+    // 흡착 결과 (FR-09). 붙지 못한 이유를 구분해 PalletizingSequence가 실패로 처리한다
+    public enum VacuumAttachResult
+    {
+        Attached,         // 흡착 성공
+        NoBox,            // 대상 박스 없음 또는 Rigidbody·BoxCollider 없음
+        AlreadyHolding,   // 이미 다른 박스를 들고 있음
+        TooFar,           // 흡착면과 박스 윗면 사이가 접촉 거리보다 멂
+        OffCenter,        // 흡착면 중심이 박스 윗면 안쪽 허용 범위를 벗어남
+        Tilted            // 툴 축과 박스 윗면 수직이 허용 각도보다 어긋남
+    }
+
+    // 박스 1개 적재 결과 (FR-09, FR-10). 성공일 때만 파레트 적재 수를 늘린다
+    public enum PalletizingResult
+    {
+        Success,          // 지정 자리에 놓고 위치 확인까지 끝남
+        NoBox,            // 픽업 구역에 정렬된 박스 없음
+        PalletFull,       // 파레트가 6×L 완료라 놓을 자리 없음
+        Busy,             // 이미 동작 중
+        PickMoveFailed,   // 흡착점 접근·하강 이동 실패 (해 없음·도달 실패)
+        AttachFailed,     // 흡착 조건 불충족 (VacuumAttachResult 참고)
+        CarryMoveFailed,  // 들어 올림·운반·하강 이동 실패
+        Dropped,          // 운반 중 흡착력 초과로 떨어짐
+        PlaceCheckFailed  // 해제 후 박스가 지정 자리·수평 허용 범위를 벗어남
+    }
 }

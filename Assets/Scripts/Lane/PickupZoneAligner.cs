@@ -61,13 +61,14 @@ namespace Logistics
                 Vector3 upstream = pickupPoint.right;
                 b.Encapsulate(b.center + upstream * (Vector3.Dot(b.extents, new Vector3(Mathf.Abs(upstream.x), Mathf.Abs(upstream.y), Mathf.Abs(upstream.z))) + approachLength));
             }
-            int n = Physics.OverlapBoxNonAlloc(b.center, b.extents, hits, Quaternion.identity, ~0, QueryTriggerInteraction.Ignore);
+            // 자기가 속한 장면의 물리에서 찾는다 (시험용 미리보기 장면에서도 같은 동작)
+            int n = gameObject.scene.GetPhysicsScene().OverlapBox(b.center, b.extents, hits, Quaternion.identity, ~0, QueryTriggerInteraction.Ignore);
             LogisticsBox found = null;
             for (int i = 0; i < n; i++)
             {
                 Rigidbody body = hits[i].attachedRigidbody;
                 LogisticsBox box = body != null && !body.isKinematic ? body.GetComponent<LogisticsBox>() : null;
-                if (box != null)
+                if (box != null && !box.IsHeld)   // 흡착 툴이 들어 올리는 중인 박스는 다시 정렬하지 않는다
                 {
                     found = box;
                     break;

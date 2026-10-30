@@ -120,8 +120,9 @@ namespace Logistics
             targetOpen = 1f;
             float elapsed = 0f;
 
-            //2. 박스가 감지 영역을 떠날 때까지 (제한 시간 안)
-            while (box != null && FindWaitingBox() == box && elapsed < releaseTimeout)
+            //2. 센서 이탈이 아니라 박스 뒷부분이 실제 스토퍼 면을 통과했는지 확인한다.
+            // 옆으로 밀려 센서에서 빠지거나 다른 박스가 더 가까워져도 방출 완료가 아니다.
+            while (box != null && (!IsOpen || !HasPassed(box)) && elapsed < releaseTimeout)
             {
                 elapsed += Time.deltaTime;
                 yield return null;
@@ -130,8 +131,9 @@ namespace Logistics
 
             //3. 닫기
             targetOpen = 0f;
+            while (openAmount > 0.01f) yield return null;
             releasing = null;
-            if (box != null && elapsed < releaseTimeout)
+            if (box != null && HasPassed(box) && elapsed < releaseTimeout)
             {
                 Released?.Invoke(box);
             }
@@ -139,6 +141,16 @@ namespace Logistics
             {
                 Debug.LogWarning("[MiddleStopper] 방출한 박스가 제한 시간 안에 지나가지 않음", this);
             }
+        }
+
+        private bool HasPassed(Rigidbody box)
+        {
+            var shape = box.GetComponentInChildren<BoxCollider>();
+            if (shape == null || closedPose == null) return false;
+            Bounds b = shape.bounds;
+            Vector3 direction = transform.forward;
+            float half = Vector3.Dot(b.extents, new Vector3(Mathf.Abs(direction.x), Mathf.Abs(direction.y), Mathf.Abs(direction.z)));
+            return Vector3.Dot(b.center - closedPose.position, direction) - half > 0.03f;
         }
 
         // 초기화 버튼: 스토퍼 닫힘

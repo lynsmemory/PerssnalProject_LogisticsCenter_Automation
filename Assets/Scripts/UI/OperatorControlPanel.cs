@@ -5,6 +5,8 @@ namespace Logistics
 {
     // 운전 조작·설정 선택·뷰 선택을 받아 해당 클래스 함수를 호출하고, 설정 L·N과 레인 상태·정체 알람을 표시한다. (FR-02, FR-18, FR-19, FR-21, FR-23)
     // OnStart 등 공개 함수는 uGUI Button OnClick에 연결한다. UI 에셋을 연결하기 전에는 drawFallbackGui로 화면 왼쪽 위에 기본 패널을 그린다.
+    // 기본 패널은 기준 해상도(referenceResolution) 좌표로 그리고 현재 화면 크기에 맞춰 같은 비율로 키우거나 줄인다.
+    // 고정 픽셀로 그리면 화면 크기를 바꿀 때 패널이 차지하는 위치·비율이 달라진다 (10/30 사용자 보고).
     // 버튼은 운전 상태에 맞을 때만 누를 수 있다 (정지: 시작·설정 선택 / 운전: 일시정지 / 일시정지: 재개 / 초기화는 항상).
     public class OperatorControlPanel : MonoBehaviour
     {
@@ -17,6 +19,12 @@ namespace Logistics
 
         [Tooltip("UI 에셋 연결 전 기본 화면 (IMGUI)")]
         [SerializeField] private bool drawFallbackGui = true;
+
+        [Tooltip("기본 패널 기준 해상도 (픽셀). 화면이 이 크기일 때 패널이 아래 위치·크기로 그려진다")]
+        [SerializeField] private Vector2 referenceResolution = new Vector2(1920f, 1080f);
+
+        [Tooltip("기준 해상도에서 기본 패널의 위치·크기 (왼쪽 위 기준, 픽셀)")]
+        [SerializeField] private Rect panelRect = new Rect(10f, 10f, 380f, 330f);
         #endregion
 
         #region 2. 상태
@@ -64,7 +72,7 @@ namespace Logistics
             }
             if (simulation.BoxSpawner != null)
             {
-                text.AppendLine($"투입 {simulation.BoxSpawner.SpawnedCount}개");
+                text.AppendLine($"투입 {simulation.BoxSpawner.SpawnedCount}개{(simulation.BoxSpawner.IsFeedBlocked ? "  [합류 대기·투입선 정지]" : "")}");
             }
             if (simulation.BarcodeScanner != null)
             {
@@ -93,13 +101,24 @@ namespace Logistics
             }
         }
 
+        // 화면 크기 / 기준 해상도 비율. 가로·세로 중 작은 쪽을 써서 글자·버튼 비율을 유지한다
+        public float PanelScale => Mathf.Min(Screen.width / Mathf.Max(1f, referenceResolution.x), Screen.height / Mathf.Max(1f, referenceResolution.y));
+
+        // 현재 화면에서 기본 패널이 차지하는 영역 (픽셀, 왼쪽 위 기준)
+        public Rect ScreenPanelRect => new Rect(panelRect.x * PanelScale, panelRect.y * PanelScale, panelRect.width * PanelScale, panelRect.height * PanelScale);
+
         private void OnGUI()
         {
             if (!drawFallbackGui || simulation == null)
             {
                 return;
             }
-            GUILayout.BeginArea(new Rect(10, 10, 380, 330), GUI.skin.box);
+            //1. 기준 해상도 좌표로 그리도록 화면 크기 비율만큼 확대·축소한다
+            Matrix4x4 previousMatrix = GUI.matrix;
+            float scale = PanelScale;
+            GUI.matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, new Vector3(scale, scale, 1f));
+
+            GUILayout.BeginArea(panelRect, GUI.skin.box);
             SimulationRunState state = simulation.State;
 
             GUILayout.BeginHorizontal();
@@ -137,6 +156,9 @@ namespace Logistics
 
             GUILayout.Label(text.ToString());
             GUILayout.EndArea();
+
+            //2. 다른 IMGUI에 영향이 없도록 원래 행렬로 되돌린다
+            GUI.matrix = previousMatrix;
         }
         #endregion
     }

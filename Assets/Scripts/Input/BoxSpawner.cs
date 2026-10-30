@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Logistics
 {
     // 투입점에 정한 간격으로 박스를 생성한다. 정체된 레인 바코드의 박스는 투입하지 않는다. (FR-03, FR-04, FR-19)
-    // 라벨 순서를 돌며 다음 바코드의 레인이 정체 중이면 그 바코드를 건너뛰고, 모든 레인이 정체면 기다린다.
+    // 설정된 라벨 후보 중 정체되지 않은 레인을 같은 확률로 무작위 선택하고, 모두 정체면 기다린다.
     // 투입점 주변에 앞 박스가 남아 있으면 생성을 미룬다 (겹쳐 생성 방지).
     public class BoxSpawner : MonoBehaviour
     {
@@ -20,7 +20,7 @@ namespace Logistics
         [Tooltip("생성할 박스 타입")]
         [SerializeField] private BoxType spawnBoxType = BoxType.Standard;
 
-        [Tooltip("생성할 바코드 순서")]
+        [Tooltip("무작위로 선택할 바코드 후보 (중복 레인은 한 번만 반영)")]
         [SerializeField] private DestinationLane[] labelSequence = { DestinationLane.Lane1, DestinationLane.Lane2, DestinationLane.Lane3 };
 
         [Tooltip("라벨 이미지 생성")]
@@ -28,6 +28,9 @@ namespace Logistics
 
         [Tooltip("레인별 투입 허용 확인 (DestinationLane 순서)")]
         [SerializeField] private LaneOccupancyMonitor[] laneMonitors = new LaneOccupancyMonitor[3];
+
+        [Tooltip("전담 공정. 적재 실패나 파레트 완료로 멈춘 레인의 신규 라벨은 생성하지 않는다")]
+        [SerializeField] private LaneProcessController[] laneProcesses = new LaneProcessController[3];
 
         [Tooltip("투입점 주변 비움 확인 반경 (m)")]
         [SerializeField, Min(0.05f)] private float clearRadius = 0.3f;
@@ -38,13 +41,14 @@ namespace Logistics
 
         #region 2. 상태
         private readonly List<LogisticsBox> spawned = new List<LogisticsBox>();
+        private readonly List<DestinationLane> availableLanes = new List<DestinationLane>();
         private readonly Collider[] hits = new Collider[8];
         private Coroutine loop;
         private float interval = 6f;
-        private int sequenceIndex;
 
         public bool IsSpawning => loop != null;
         public int SpawnedCount { get; private set; }
+        public bool IsFeedBlocked { get; private set; }
         public IReadOnlyList<LogisticsBox> SpawnedBoxes => spawned;
 
         // 생성 알림. 두 번째 인자는 붙인 라벨의 레인 (기록·시험 비교용이며 판독 결과로 쓰지 않는다)
@@ -78,14 +82,14 @@ namespace Logistics
             }
         }
 
-        // 간격마다 다음 바코드 확인 후 생성하고 라벨을 붙이는 코루틴
+        // 투입점이 비면 무작위 바코드를 선택해 생성하고 라벨을 붙이는 코루틴
         private IEnumerator SpawnLoop()
         {
             while (true)
             {
-                //1. 투입할 바코드 선택 (정체 레인 건너뜀)과 투입점 비움 대기
+                //1. 투입점이 비었을 때만 추첨한다. 기다리는 동안에는 재추첨하지 않는다.
                 DestinationLane lane;
-                while (!TryNextLane(out lane) || !IsSpawnPointClear())
+                while (IsFeedBlocked || !IsSpawnPointClear() || !TryNextLane(out lane))
                 {
                     yield return new WaitForSeconds(0.25f);
                 }
@@ -103,20 +107,28 @@ namespace Logistics
             {
                 return false;
             }
+            availableLanes.Clear();
             for (int i = 0; i < labelSequence.Length; i++)
             {
-                int index = (sequenceIndex + i) % labelSequence.Length;
-                DestinationLane candidate = labelSequence[index];
+                DestinationLane candidate = labelSequence[i];
                 LaneOccupancyMonitor monitor = MonitorFor(candidate);
-                if (monitor == null || !monitor.IsCongested)
+                LaneProcessController process = laneProcesses != null ? Array.Find(laneProcesses, p => p != null && p.Lane == candidate) : null;
+                bool unavailable = process != null && (process.IsHaltedByFailure || (process.UsesRobot && process.Pallet.IsComplete));
+                if (!unavailable && (monitor == null || !monitor.IsCongested) && !availableLanes.Contains(candidate))
                 {
-                    lane = candidate;
-                    sequenceIndex = (index + 1) % labelSequence.Length;
-                    return true;
+                    availableLanes.Add(candidate);
                 }
             }
-            return false;
+            if (availableLanes.Count == 0)
+            {
+                return false;
+            }
+            lane = availableLanes[UnityEngine.Random.Range(0, availableLanes.Count)];
+            return true;
         }
+
+        // 투입 컨베이어 정지와 함께 생성만 보류한다. 기존 투입 간격과 코루틴은 유지한다.
+        public void SetFeedBlocked(bool blocked) => IsFeedBlocked = blocked;
 
         private LaneOccupancyMonitor MonitorFor(DestinationLane lane)
         {
@@ -176,10 +188,11 @@ namespace Logistics
             Destroy(box.gameObject);
         }
 
-        // 초기화 버튼: 투입 중지, 씬의 모든 박스 제거, 라벨 순서 처음으로
+        // 초기화 버튼: 투입 중지, 씬의 모든 박스 제거, 라벨 후보 임시 목록 비움
         public void ResetToInitialState()
         {
             Stop();
+            IsFeedBlocked = false;
             foreach (LogisticsBox box in spawned)
             {
                 if (box != null)
@@ -188,7 +201,7 @@ namespace Logistics
                 }
             }
             spawned.Clear();
-            sequenceIndex = 0;
+            availableLanes.Clear();
         }
         #endregion
     }
